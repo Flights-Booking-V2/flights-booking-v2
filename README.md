@@ -1,20 +1,20 @@
 # Project Name
 
-> Flight Booking
+> Flight Booking version 2
 
 ## Team
 
-  - __Product Owner__: Shoukri
-  - __Scrum Master__: Yossef
-  - __Development Team Members__: Rula
+- **Product Owner**: RBK
+- **Scrum Master**: Khaled Abousheikh
+- **Development Team Members**: Safaa Alshami , Anas Abdelwahed , Nasr Shamalkh and Mohammed AbuShaaban
 
 ## Table of Contents
 
 1. [Usage](#Usage)
 1. [Requirements](#requirements)
 1. [Development](#development)
-    1. [Installing Dependencies](#installing-dependencies)
-    1. [Tasks](#tasks)
+   1. [Installing Dependencies](#installing-dependencies)
+   1. [Tasks](#tasks)
 1. [Team](#team)
 1. [Contributing](#contributing)
 
@@ -48,7 +48,6 @@ sign in
 Enter the departure airport and arrival airport
 Enter the period by date
 Find a ticket
-
 
 ## Contributing
 
