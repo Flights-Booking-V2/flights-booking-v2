@@ -1,4 +1,4 @@
-# Project Name
+# Flight Booking
 
 > Flight Booking version 2
 

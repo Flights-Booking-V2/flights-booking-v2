@@ -6,9 +6,9 @@ const axios = require("axios");
 
 var airportName = [];
 var airportcode = [];
-airports.map((element) => {
-  var elements = [element.city, element.name, element.iata].join(" ");
-  var elm = { name: element.name, code: element.iata };
+airports.map((element) => { // element is an arry of objects that contain information about the airports such as name, city, country, iata and more
+  var elements = [element.city, element.name, element.iata].join(" "); //convert name, city and iata to a string
+  var elm = { name: element.name, code: element.iata }; 
   airportcode.push(elm);
   return airportName.push(elements);
 });
@@ -190,31 +190,6 @@ class HomePage extends React.Component {
           </span>
         </div>
       </form>
-      // <div>
-      //   <form>
-      //     <table id="info">
-      //       <tbody  >
-      //         <tr  >
-      //           <td  style={{ width: "50px", padding: "20px" }}>
-      //             {item.QuoteId}
-      //           </td>
-      //           <td  style={{ width: "50px", padding: "20px" }}>
-      //             {item.Direct.toString()}
-      //           </td>
-      //           <td    style={{ width: "50px", padding: "20px" }}>
-      //             {item.MinPrice}
-      //           </td>
-      //           <td    style={{ width: "50px", padding: "20px" }}>
-      //             {item.OutboundLeg.DepartureDate}
-      //           </td>
-      //           <td   style={{ width: "50px", padding: "20px" }}>
-      //             {item.QuoteDateTime}
-      //           </td>
-      //         </tr>
-      //       </tbody>
-      //     </table>
-      //   </form>
-      // </div>
     ));
     return (
       <div>
