@@ -9,8 +9,7 @@ from the command line:
 
     npm install
     npm install /client
-    npm run start index.js
-    npm run start /client
+    bpm run dev
 
 0. Make sure master is up to date
    git checkout master
