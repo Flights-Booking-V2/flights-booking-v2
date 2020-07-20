@@ -1,75 +1,49 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-var UserScema = require("./Database/db.js");
+var User = require('./models/UserModel');
 const path = require("path");
-const app = express();
-const cors = require("cors");
-app.use(express.json());
-var port = process.env.PORT || 5001;
-app.use("/", express.static(path.join(__dirname, "/client/build")));
-app.use(cors());
-//-------------------------------------------------------------
-//for homepage form reactjs
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "/client/build", "index.html"));
-});
-//-----------------------------------------------
-// Get Users from DataBase
-app.get("/api/users", function (req, res) {
-  UserScema.find({}, function (err, docs) {
-    if (err) {
-      console.log(err);
-    }
-    res.send(docs);
-    console.log("done", docs);
-  });
-});
-//-------------------------------------------------------
-// Add Users to DataBase
-app.post("/api/users", function (req, res) {
-  console.log("server", req.body);
-  var newUser = new UserScema(req.body);
-  console.log(newUser);
-  newUser.save(function (err, data) {
-    if (err) {
-      res.sendStatus(500);
-      res.end();
-    } else {
-      console.log("done");
-      res.end();
-    }
-  });
-});
-//-------------------------------------------------------
-//search for 1 user
-app.get("/api/users/:name", function (req, res) {
-  var search = req.params.name;
-  console.log(search);
-  UserScema.find({ name: search }, function (err, docs) {
-    if (err) {
-      console.log(err);
-    }
-    res.send(docs);
-    console.log("done", docs);
-  });
-});
-//---------------------------------------
-//delete user by name
-app.delete("/api/users/:name", function (req, res) {
-  UserScema.remove({ name: req.params.name }, (err, result) => {
-    if (err) {
-      console.log(err);
-    }
-    console.log(req.body);
-    res.end();
-  });
-});
-//---------------------------------------------
-app.post("/signin", (req, res) => {
-  var email = req.body.email;
-  var password = req.body.password;
+const cors = require("cors");//node module to allow requests from server to server (from react server to backend server)
+const users = require('./routes/api/users');
+const mongoose = require('mongoose');
 
-  UserScema.find({ email: email, password: password })
+//db config 
+const db = require('./config/keys').mongoURI;
+
+//----------------------------------------
+
+const app = express();
+// app.use("/", express.static(path.join(__dirname, "/client/build")));
+app.use(cors());
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+//-------------------------------------------------------------
+
+// connection to database
+mongoose.connect(db, {useNewUrlParser: true})
+.then(() => console.log('connected to database successfully'))
+.catch((err) => console.log('Error in connecting to database', err));
+
+//for herokuapp to use the static files presented after the build 
+if(process.env.NODE_ENV === 'production'){
+  app.use(express.static('client/build'));
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build' ,'index.html'))
+  })
+}
+
+
+//using routers 
+app.use("/api", users);
+app.get('/', (req, res) => {
+  res.send('Backend server for Flights Booking app')
+})
+
+app.post("/signin", (req, res) => {
+  var { email,password } = req.body;
+
+  User.find({ email: email, password: password })
     .then((result) => {
       console.log(result[0].name);
       res.status(202).send(result[0].name);
@@ -80,19 +54,11 @@ app.post("/signin", (req, res) => {
       res.status(404).send(err);
       console.log(err);
     });
-});
+  });
+  
+
+var port = process.env.PORT || 5001;
+
 app.listen(port, function () {
   console.log(`listening on port ${port}!`);
-});
-
-app.get("/api/users/:email", function (req, res) {
-  var search = req.params.email;
-  console.log(search);
-  UserScema.find({ email: search }, function (err, docs) {
-    if (err) {
-      console.log(err);
-    }
-    res.send(docs);
-    console.log("done", docs);
-  });
 });
