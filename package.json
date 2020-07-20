@@ -6,17 +6,20 @@
   "scripts": {
     "test": "mocha test/test.js",
     "start": "node index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "dev": "concurrently \"nodemon index.js\" \"cd client && npm start\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "airport-data": "^1.0.1",
     "axios": "^0.19.2",
+    "concurrently": "^5.2.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "firebase": "^7.16.0",
     "mongoose": "^5.9.24",
+    "nodemon": "^2.0.4",
     "react-bootstrap": "^1.2.2",
     "react-firebaseui": "^4.1.0",
     "react-router-dom": "^5.2.0",

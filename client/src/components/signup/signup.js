@@ -14,7 +14,7 @@ firebase.initializeApp({
 });
 
 //chang the name of componet to singUP
-class SingUP extends React.Component {
+class Singup extends React.Component {
   constructor(props) {
     super(props);
     //change to shcema
@@ -54,26 +54,11 @@ class SingUP extends React.Component {
 
   handleChange = (e) => {
     this.setState({ [e.target.id]: e.target.value });
-    console.log(this.state);
+    // console.log(this.state);
   };
-
-  // checkemail = () => {
-  //   axios
-  //     .get(`http://localhost:3800/api/users/${this.state.email}`)
-  //     .then((result) => {
-  //       console.log("get reat", result);
-  //       console.log("the email is available ");
-  //     })
-  //     .catch((err) => {
-  //       console.log("ERROR the email is used ", err);
-  //       this.setState({ isExist: false });
-  //     });
-  // };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    // if (this.isExist) {
-    //change the root to APi/users
     axios
       .post("/api/users", {
         name: this.state.name,
@@ -83,16 +68,16 @@ class SingUP extends React.Component {
       .then((result) => {
         console.log("result   ", result);
         this.setState({ singup: "sign up success please sign in" });
-        setTimeout(function () {
-          window.location.href = "/Signin";
-        }, 2000);
+        // setTimeout(function () {
+        //   window.location.href = "/Signin";
+        // }, 2000);
       })
       .catch((err) => {
         console.log("ERROR FROM AXIOS ", err);
         this.setState({ singup: "please use a different email or user name" });
-        setTimeout(function () {
-          window.location.href = "/Signup";
-        }, 2000);
+        // setTimeout(function () {
+        //   window.location.href = "/Signup";
+        // }, 2000);
       });
     // } else {
     //   alert("The email is aready used");
@@ -195,4 +180,4 @@ class SingUP extends React.Component {
   }
 }
 
-export default SingUP;
+export default Singup;

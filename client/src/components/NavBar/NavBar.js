@@ -1,14 +1,13 @@
 import React from "react";
 import "./style.css";
-
+//main navBar that is used on all pages
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      userEmail: this.props.user,
     };
   }
-
+  //didnt use routing::: used basic link (a tag) routing 
   render() {
     return (
       <header className="navbar">
