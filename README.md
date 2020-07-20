@@ -47,8 +47,7 @@ From within the root directory:
 ```sh
     npm install
     npm install /client
-    npm run start index.js
-    npm run start /client
+    npm run dev
 ```
 
 ### Roadmap
