@@ -24,11 +24,19 @@
 
 ## Requirements
 
-- Node 0.10.x
+- Nodejs
 - Reactjs
-- mongoose 5.9
-- axios 0.19
--
+- Express
+- mongoose
+- airport-data
+- axios
+- cors
+- express
+- firebase
+- react-bootstrap
+- react-firebaseui
+- react-router-dom
+- react-scripts
 
 ## Development
 
@@ -37,18 +45,16 @@
 From within the root directory:
 
 ```sh
-sudo npm install -g bower
-npm install
-bower install
+    npm install
+    npm install /client
+    npm run start index.js
+    npm run start /client
 ```
 
 ### Roadmap
 
-sign in
-Enter the departure airport and arrival airport
-Enter the period by date
-Find a ticket
+View the project roadmap [here](https://github.com/Flights-Booking-V2/flights-booking-v2/issues/)
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
+See [CONTRIBUTING.md](https://github.com/Flights-Booking-V2/flights-booking-v2/blob/dev/_CONTRIBUTING.md) for contribution guidelines.

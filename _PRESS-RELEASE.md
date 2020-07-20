@@ -1,4 +1,4 @@
-# Expenses Tracker
+# Flights booking
 
 <!--
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -18,50 +18,48 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Heading
 
-Expenses Tracker
+Flights booking
 
 > Heading
 
 ## Sub-Heading
 
-Expense Tracker is a simple expense tracking application. Allows you to monitor your spending pattern.
+Flights booking is a simple flights booking application. Allows you to pick a flight ticket by choosing current location "city" and destination location "city".
 
 > Sub-Heading
 
 ## Summary
 
-It Helps You Stick to Your Budget. Tracking Your Expenses Can Reveal Spending Issues
-It Helps You Meet Your Financial Objectives.
+It Helps You Stick to Your flight. Tracking Your Needed flights Can Reveal Your Issues
+It Helps You Meet Your Traveling Objectives.
 
 > Summary
 
 ## Problem
 
-A single page app that will allow users to record their expenses day by day without having to use pen and paper.
+A simple design app that will allow users to search for current flights by detection range dates and have an ordered list with information upon required flights.
 
 > Describe the problem your product solves.
 
 ## Solution
 
-We will display all expenses while allowing users to choose the type of the expenses on each time.
-
-<!-- Users can also find their expenses by type of expenses. -->
+We will display all chosen date range flights while allowing users to see the price and pick a tieckt.
 
 > Describe how your product elegantly solves the problem.
 
 ## Quote from You
 
-> "We are amazing just the way we are"
+> "If We Don't Have Trust, We Have Nothing."
 
 ## How to Get Started
 
-Simply register a new account and then login. start recording your expenses.
+Simply register a new account and then login.Go to Home page and enjoy !!!
 
 > Describe how easy it is to get started.
 
 ## Customer Quote
 
-"Expenses record allows me to record my expenses easily.I like the idea"
+<!-- "Expenses record allows me to record my expenses easily.I like the idea" -->
 
 > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
 
