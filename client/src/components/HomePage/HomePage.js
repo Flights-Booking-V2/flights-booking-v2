@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../NavBar/NavBar.js";
 import "./style.css";
 import Pdf from "react-to-pdf";
+import { render } from "react-dom";
 const airports = require("airport-data");
 const axios = require("axios");
 // var pdf = require('html-pdf');
@@ -18,18 +19,20 @@ airports.map((element) => {
 });
 
 class HomePage extends React.Component {
-  renderTableData = () => {
-    return this.props.Trans.map((element, index) => {
-      const { expensesTypes, description, amount } = element;
-      return (
-        <tr key={index}>
-          <td>{expensesTypes}</td>
-          <td>{description}</td>
-          <td>{amount}</td>
-        </tr>
-      );
-    });
-  };
+  // renderTableData = () => {
+  //   return this.props.Trans.map((element, index) => {
+  //     const { ID, Direct, MinPrice, QuoteDateTime, DepartureDate } = element;
+  //     return (
+  //       <tr key={index}>
+  //         <td>{ID}</td>
+  //         <td>{Direct}</td>
+  //         <td>{MinPrice}</td>
+  //         <td>{QuoteDateTime}</td>
+  //         <td>{DepartureDate}</td>
+  //       </tr>
+  //     );
+  //   });
+  // };
   constructor(props) {
     super(props);
     this.items = airportName;
@@ -43,6 +46,7 @@ class HomePage extends React.Component {
       dataTicket: [],
       trip: "",
       dataRn: [],
+      Trans: [],
     };
   }
 
@@ -153,7 +157,6 @@ class HomePage extends React.Component {
 
   render() {
     const { dataTicket } = this.state;
-
     const table1 = dataTicket.map((item, i) => (
       <div>
         <form>
@@ -244,7 +247,7 @@ class HomePage extends React.Component {
                     </th>
                   </tr>
                 </thead>
-                <tbody>{this.renderTableData()}</tbody>
+                {/* <tbody>{this.renderTableData()}</tbody> */}
               </table>
             </form>
             {table1}
