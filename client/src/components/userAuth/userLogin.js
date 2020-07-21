@@ -1,16 +1,36 @@
 import React, { Component } from "react";
-import Navbar from "../NavBar/NavBar.js";
 import "./style.css";
-const axios = require("axios");
+import { login } from './LoginFunc';
+import {BrowserRouter ,Router,Route,Link,Switch,Redirect } from 'react-router-dom'
 
+const authintication={
+    isLoggedIn : false,
+    onAuthintication(){
+      this.isLoggedIn=true
+    },
+    ofAuthintication(){
+      this.isLoggedIn=false
+    },
+    getLoginStatus(){
+    return this.isLoggedIn
+    }
+}
+
+const PrivateRoute = ({ component: Component, ...rest }) => (
+    <Route {...rest} render={(props) => (
+      authintication.getLoginStatus() === true
+        ? <Component {...props} />
+        : <Redirect to='/' />
+    )} />
+  )
 class Signin extends Component {
   constructor(props) {
     super(props);
     this.state = {
       email: "",
       password: "",
-      username: "",
-      singip: "",
+      signip: "",
+      falseSignin: false
     };
   }
   handleChange(e) {
@@ -21,44 +41,26 @@ class Signin extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    axios
-      .post("/signin", {
+    const user = {
         email: this.state.email,
-        password: this.state.password,
-      })
-      .then((result) => {
-        console.log("result   ", result);
-        this.setState({ singip: "sign in success " });
-        setTimeout(function () {
-          window.location.href = "/";
-        }, 2000);
-      })
-      .then(() => {
-        this.finduser();
-      })
-      .catch((err) => {
-        console.log("ERROR FROM AXIOS ", err);
-        this.setState({ singip: "Woring Email or Password " });
-      });
-  }
-  finduser() {
-    axios
-      .get("api/users", {
-        params: {
-          ID: this.state.email,
-        },
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch((err) => {
-        console.log("ERROR FROM AXIOS ", err);
-      });
+        password: this.state.password
+    }
+    login(user).then(res => {
+        if(res) {
+            authintication.onAuthintication();
+            this.setState({signip: 'sign in successfull'});
+            this.props.history.push('/HomePage');
+            console.log(res);
+        }
+    })
+    .catch((err) => {
+        console.log('Error in logging', err);
+        this.setState({falseSignin: true});
+    })
   }
   render() {
     return (
       <div>
-        <Navbar user={this.state.email} />
         <form className="login">
           <h1 className="header">LogIn</h1>
           <h2>{this.state.singip}</h2>
@@ -89,9 +91,15 @@ class Signin extends Component {
             Sign In
           </button>
         </form>
+        <div>{this.state.falseSignin ? 'Please Check your info': ''}</div>
       </div>
     );
   }
 }
 
-export default Signin;
+export{
+
+    authintication,
+    Signin,
+    PrivateRoute,   
+  }
