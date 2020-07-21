@@ -1,0 +1,51 @@
+/* 
+div {
+    width: 100px;
+    padding: 20px;
+    text-align: center;
+    background: url(./landing.jpg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+
+} */
+h1{
+    margin-top: 100px;
+    font-family: cursive;
+    color: #fff;
+    font-size: 40px;
+  }
+
+  
+
+  button{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    background: #487eb0;
+    color: #fff;
+    border-radius: 44px;
+    cursor: pointer;
+    transition: 0.8s;
+  
+    width: 15%;
+    padding: 5 16px;
+    height: 44px;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: "montserrat",sans-serif; 
+}
+button:hover{
+    transform: scale(0.96);
+  }
+
+  p{
+    margin-top: 50px;
+    font-family: 'Permanent Marker', cursive;
+    color: rgb(0, 91, 211);
+    font-size: 20px;
+  }
+  

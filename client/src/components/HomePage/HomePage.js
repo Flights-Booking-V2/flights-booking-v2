@@ -199,7 +199,7 @@ class HomePage extends React.Component {
       <div ref={ref}>
         <Navbar />
         <div className="main">
-          <label>Depart</label>
+          <label className="L">Depart</label>
           <input
             className="from input1"
             value={this.state.departure}
@@ -208,7 +208,7 @@ class HomePage extends React.Component {
             name="departure"
           />
           {this.renderSuggestions()}
-          <label>From</label>
+          <label className="L">From</label>
 
           <input
             className="depart input1"
@@ -218,7 +218,7 @@ class HomePage extends React.Component {
             name="depDate"
           />
           <br></br>
-          <label>Return</label>
+          <label className="L">Return</label>
           <input
             className="to input1"
             value={this.state.arrival}
@@ -227,7 +227,7 @@ class HomePage extends React.Component {
             name="arrival"
           />
           {this.renderSuggestions2()}
-          <label>To</label>
+          <label className="M">To</label>
           <input
             className="return input1"
             type="date"
