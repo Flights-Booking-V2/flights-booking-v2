@@ -23,8 +23,8 @@ class NavBar extends React.Component {
         <div className="navbar_item">
           <NavLink to="/ContactUs">Contact us</NavLink>
         </div>
-        <div>
-          <button><NavLink to='/'>Log out</NavLink></button>
+        <div className="navbar_item">
+          <NavLink to='/'>Log out</NavLink>
         </div>
       </nav>
     );
