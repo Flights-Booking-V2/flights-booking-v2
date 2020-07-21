@@ -35,6 +35,9 @@ class ContactUs extends React.Component {
     subject: "",
     message: "",
   };
+  alertMessage() {
+    alert("Your message has been sent");
+  }
   handleSubmit(e) {
     e.preventDefault();
     const { name, email, subject, message } = this.state;
@@ -68,6 +71,7 @@ class ContactUs extends React.Component {
       <div>
         <Navbar />
         {/* <Layout> */}
+        <h1>Give us your informations here</h1>
         <Form onSubmit={this.handleSubmit.bind(this)}>
           <FormGroup controlId="formBasicEmail">
             <Label className="text-muted">Email address</Label>
@@ -129,8 +133,8 @@ class ContactUs extends React.Component {
               onChange={this.handleChange.bind(this, "message")}
             />
           </FormGroup>
-          <Button variant="primary" type="submit">
-            Submit
+          <Button variant="primary" type="submit" onClick={this.alertMessage}>
+            Send message
           </Button>
         </Form>
       </div>
