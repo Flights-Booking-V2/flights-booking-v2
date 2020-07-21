@@ -40,21 +40,6 @@ app.get('/', (req, res) => {
   res.send('Backend server for Flights Booking app')
 })
 
-app.post("/signin", (req, res) => {
-  var { email,password } = req.body;
-
-  User.find({ email: email, password: password })
-    .then((result) => {
-      console.log(result[0].name);
-      res.status(202).send(result[0].name);
-
-      // console.log(result);
-    })
-    .catch((err) => {
-      res.status(404).send(err);
-      console.log(err);
-    });
-  });
   
 
 var port = process.env.PORT || 5001;
