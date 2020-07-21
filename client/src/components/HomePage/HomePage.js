@@ -244,7 +244,7 @@ class HomePage extends React.Component {
           <br></br>
           {table1}
         </div>
-        <div className="App">
+        <div className="AppA">
       <Pdf targetRef={ref} filename="code-example.pdf">
         {({ toPdf }) => <button onClick={toPdf}>Print Ticket</button>}
       </Pdf>

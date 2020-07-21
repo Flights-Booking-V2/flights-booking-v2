@@ -10,11 +10,11 @@ class LandingPage extends React.Component {
             <div>
                 <h1>Welcome to Flights records</h1>
                 {/* <p>Please Sign in</p> */}
-                <button ><Link to='/Signin'>Sign in</Link></button>
+                <button className="PTN"><Link to='/Signin'>Sign In</Link></button>
                 
                 {/* <p>Or, if you dont have an account</p> */}
                 <br></br>
-                <button ><Link to="/Signup">Sign up</Link></button>
+                <button className="PTN" ><Link to="/Signup">Sign Up</Link></button>
             </div>
             
         )

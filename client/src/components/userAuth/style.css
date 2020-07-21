@@ -13,7 +13,7 @@
     font-family: 'Bungee Inline', cursive;
     text-align: center;
     margin-top: 20px;
-    background-color: rgba(39, 47, 97, 0.65);
+    /* background-color: rgba(39, 47, 97, 0.65); */
     margin-left:500px;
     margin-right: 500px;
     padding-bottom: 2px;
@@ -40,7 +40,7 @@
   .button_signin{
     margin-top: 0px;
     margin-bottom: 20px;
-    background: #487eb0;
+    background: rgba(131, 158, 216, 0.924);
     color: #fff;
     border-radius: 44px;
     cursor: pointer;
@@ -53,8 +53,9 @@
     box-sizing: border-box;
     outline: none;
     border: none;
-    font-family: "montserrat",sans-serif; 
-  }
+   font-family: Georgia, serif;
+   font-size: 1.5em;  
+   }
   
   .button_signin:hover{
     background-color:#f2e6ff;
@@ -63,7 +64,7 @@
   
   .header{
     margin-top: 100px;
-    font-family: cursive;
+    font-family: Georgia, serif;
     color: #fff;
     font-size: 60px;
   }
@@ -71,14 +72,42 @@
   .email_lab{
     margin-top: 10px;
     font-family: Georgia, serif;
-    color: #fff;
+    color: rgb(7, 50, 63);  
     font-size: 35px;
+  
   }
 
   .Password_lab{
     margin-top: 10px;
     font-family: Georgia, serif;
-    color: #fff;
-    font-size: 22px;
+    color: rgb(7, 50, 63); 
+    font-size: 35px;
     
+  }
+
+  .password_input{
+    display: block;
+    width: 100%;
+    padding: 0 16px;
+    height: 44px;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: "montserrat",sans-serif;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .email_input{
+
+    display: block;
+    width: 100%;
+    padding: 0 16px;
+    height: 44px;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: "montserrat",sans-serif;
+    background-color: rgba(255, 255, 255, 0.5);
   }
