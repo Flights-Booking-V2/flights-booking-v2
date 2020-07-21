@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import * as emailjs from "emailjs-com";
-// import Layout from "../components/layout";
 import Navbar from "../NavBar/NavBar.js";
 
 import {
@@ -51,7 +50,6 @@ class ContactForm extends Component {
       <div>
         <Navbar />
         {/* <Layout> */}
-        <h1 className="p-heading1">Get in Touch</h1>
         <Form onSubmit={this.handleSubmit.bind(this)}>
           <FormGroup controlId="formBasicEmail">
             <Label className="text-muted">Email address</Label>
@@ -77,14 +75,31 @@ class ContactForm extends Component {
           </FormGroup>
           <FormGroup controlId="formBasicSubject">
             <Label className="text-muted">Subject</Label>
-            <Input
+            {/* <Input
               type="text"
               name="subject"
               className="text-primary"
               value={this.state.subject}
               onChange={this.handleChange.bind(this, "subject")}
               placeholder="Subject"
-            />
+            /> */}
+            <select
+              name="subject"
+              className="text-primary"
+              value={this.state.subject}
+              onChange={this.handleChange.bind(this, "subject")}
+              placeholder="Subject"
+            >
+              <option value="Operating Expenses "> </option>
+              <option value="Financial Expenses">Financial Expenses</option>
+              <option value="Extraordinary Expenses">
+                Extraordinary Expenses
+              </option>
+              <option value="Non-Operating Expenses">
+                Non-Operating Expenses
+              </option>
+              <option value="Other">Other</option>
+            </select>
           </FormGroup>
           <FormGroup controlId="formBasicMessage">
             <Label className="text-muted">Message</Label>
@@ -100,7 +115,6 @@ class ContactForm extends Component {
             Submit
           </Button>
         </Form>
-        {/* </Layout> */}
       </div>
     );
   }
