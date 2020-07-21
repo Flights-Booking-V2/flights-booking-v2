@@ -45,13 +45,13 @@ body {
 .check_button {
   border-radius: 50px;
   border: 5;
-  width: 50%;
+  width: 20%;
   height: 50px;
   font-size: 2.6em;
   outline: none;
   margin-top: 30px;
   color: white;
-  background-color: rgb(12, 2, 68);
+  /* background-color: rgb(12, 2, 68); */
   font-weight: bold;
   margin-left: 100px;
 
@@ -60,7 +60,7 @@ body {
 
 .check_button:hover {
   background-color: #f2e6ff;
-  color: rgb(12, 2, 68);
+  color: rgb(89, 79, 144);
 }
 
 .container {
@@ -104,7 +104,7 @@ body {
 
 
 .L{
-  color: white; 
+  color: rgb(81, 73, 126); 
   font-size: 30px;
   line-height: 80px;
   padding: 0 px;
@@ -164,7 +164,7 @@ body {
 } */
 
 .M{
-  color: white; 
+  color: rgb(81, 73, 126); 
   font-size: 30px;
   line-height: 80px;
   padding: 0 px;
