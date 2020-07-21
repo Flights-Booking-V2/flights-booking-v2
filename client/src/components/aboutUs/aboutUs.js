@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar'
 
-class ContactUs extends React.Component {
+class AboutUs extends React.Component {
     state = {
 
     }
@@ -9,9 +9,9 @@ class ContactUs extends React.Component {
         return (
             <div>
                 <NavBar />
-                <h1>Contact-us Page</h1>
+                <h1>About-us Page</h1>
             </div>
         )
     }
 }
-export default ContactUs;
+export default AboutUs;

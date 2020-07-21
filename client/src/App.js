@@ -1,23 +1,29 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Button } from "reactstrap";
-import HomePage from "./components/HomePage/HomePage.js";
 import Signup from "./components/signup/signup.js";
-import Signin from "./components/signin/signin.js";
-import ContactUs from "./components/ContactUs/ContactUs.js";
-//main app
+import { Signin,PrivateRoute } from './components/userAuth/userLogin';
+import LandingPage from './components/LandingPage/landingPage.js';
+import HomePage from "./components/HomePage/HomePage";
+import AboutUs from './components/aboutUs/aboutUs';
+import ContactUs from './components/contactUs/contactUs';
+
+//main app 
 //used React routers here to route to the main pages
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+    <BrowserRouter>
+      <div className="App">
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/Signin" component={Signin} />
-          <Route path="/Signup" component={Signup} />
-          <Route path="/ContactUs" component={ContactUs} />
+          <Route exact path="/" component={LandingPage}/>
+          <Route path="/Signin" component={Signin}/>
+          <Route path="/Signup" component={Signup}/>
+          <PrivateRoute path='/HomePage' component={HomePage} />
+          <PrivateRoute path='/AboutUs' component={AboutUs} />
+          <PrivateRoute path='/ContactUs' component={ContactUs} />
         </Switch>
+      </div>
       </BrowserRouter>
     </div>
   );
