@@ -9,9 +9,10 @@ const ref = React.createRef();
 
 var airportName = [];
 var airportcode = [];
-airports.map((element) => { // element is an arry of objects that contain information about the airports such as name, city, country, iata and more
+airports.map((element) => {
+  // element is an arry of objects that contain information about the airports such as name, city, country, iata and more
   var elements = [element.city, element.name, element.iata].join(" "); //convert name, city and iata to a string
-  var elm = { name: element.name, code: element.iata }; 
+  var elm = { name: element.name, code: element.iata };
   airportcode.push(elm);
   return airportName.push(elements);
 });
@@ -123,49 +124,12 @@ class HomePage extends React.Component {
       },
     })
       .then((response) => {
+        console.log("dddddd", response.data);
         this.setState({
-          dataTicket: response.data,
+          dataTicket: response.data.Quotes,
         });
       })
-      .then(() => {
-        if (this.state.dataTicket.length === 0) {
-          this.setState({
-            trip: "There are no flights available on this date",
-          });
-        } else {
-          this.setState({
-            trip: "",
-          });
-          var data = [];
-          for (var i = 0; i < this.state.dataTicket.Quotes.length; i++) {
-            data.push({
-              cost: this.state.dataTicket.Quotes[i].MinPrice,
-              Carrier: this.state.dataTicket.Quotes[i].OutboundLeg
-                .CarrierIds[0],
-              DepartureDate: this.state.dataTicket.Quotes[i].QuoteDateTime,
-            });
-          }
-          for (var k = 0; k < data.length; k++) {
-            for (var j = 0; j < this.state.dataTicket.Carriers.length; j++) {
-              if (
-                this.state.dataTicket.Carriers[j].CarrierId === data[k].Carrier
-              ) {
-                console.log(data[k].Carrier);
-                data[k].Carrier = this.state.dataTicket.Carriers[j].Name;
-              }
-            }
-          }
 
-          for (var l = 0; l < data.length; l++) {
-            data[l].DepartureDate = data[l].DepartureDate.split("T");
-          }
-          this.setState({ dataRn: data });
-
-          console.log(this.state.dataRn);
-
-          // console.log(this.state.dataTicket);
-        }
-      })
       .catch((error) => {
         console.log(error);
         this.setState({
@@ -176,24 +140,34 @@ class HomePage extends React.Component {
   //--------------------------------------------------------
 
   render() {
-    const data = this.state.dataRn;
+    const { dataTicket } = this.state;
 
-    const table1 = data.map((item, i) => (
-      <form>
-        <div className="container">
-          <lab className="Carrier">{item.Carrier}</lab>
-          <span className="date">
-            <label className="date">{item.DepartureDate[0]}</label>
-            <br />
-            <label className="hours">{item.DepartureDate[1]}</label>
-          </span>
-          <span id="price" className="wholePrice">
-            <label id="price"> price </label>
-            <h1 className="pricem">{item.cost}</h1>
-          </span>
-        </div>
-     
-      </form>
+    const table1 = dataTicket.map((item, i) => (
+      <div>
+        <form>
+          <table id="info">
+            <tbody>
+              <tr>
+                <td style={{ width: "50px", padding: "20px" }}>
+                  {item.QuoteId}
+                </td>
+                <td style={{ width: "50px", padding: "20px" }}>
+                  {item.Direct.toString()}
+                </td>
+                <td style={{ width: "50px", padding: "20px" }}>
+                  {item.MinPrice}
+                </td>
+                <td style={{ width: "50px", padding: "20px" }}>
+                  {item.OutboundLeg.DepartureDate}
+                </td>
+                <td style={{ width: "50px", padding: "20px" }}>
+                  {item.QuoteDateTime}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
     ));
     return (
       <div ref={ref}>
@@ -242,21 +216,35 @@ class HomePage extends React.Component {
           <br></br>
           {this.state.trip}
           <br></br>
-          {table1}
+          <div>
+            <form>
+              <table id="info">
+                <tbody>
+                  <tr>
+                    <td style={{ width: "50px", padding: "20px" }}>ID</td>
+                    <td style={{ width: "50px", padding: "20px" }}>Direct</td>
+                    <td style={{ width: "50px", padding: "20px" }}>MinPrice</td>
+                    <td style={{ width: "50px", padding: "20px" }}>
+                      QuoteDateTime
+                    </td>
+                    <td style={{ width: "50px", padding: "20px" }}>
+                      Departure Date
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </form>
+            {table1}
+          </div>
         </div>
         <div className="App">
-      <Pdf targetRef={ref} filename="code-example.pdf">
-        {({ toPdf }) => <button onClick={toPdf}>Print Ticket</button>}
-      </Pdf>
-      <div >
-        {/* <h1>Joy of Travel</h1>
-        <h2></h2> */}
-      </div>
-    </div>
+          <Pdf targetRef={ref} filename="code-example.pdf">
+            {({ toPdf }) => <button onClick={toPdf}>Print Ticket</button>}
+          </Pdf>
+        </div>
       </div>
     );
   }
 }
 
 export default HomePage;
- 
