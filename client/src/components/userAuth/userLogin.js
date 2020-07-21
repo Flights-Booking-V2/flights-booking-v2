@@ -62,9 +62,9 @@ class Signin extends Component {
     return (
       <div>
         <form className="login">
-          <h1 className="header">LogIn</h1>
+          <h1 className="header">Sign In</h1>
           <h2>{this.state.singip}</h2>
-          <label className="email_lab">Email</label>
+          <label className="email_lab">Email </label>
           <input
             className="email_input input"
             type="email"
