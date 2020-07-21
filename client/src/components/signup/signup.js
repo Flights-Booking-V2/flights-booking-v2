@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 
-import Navbar from "../NavBar/NavBar.js";
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import "./style.css";
@@ -54,13 +53,12 @@ class Singup extends React.Component {
 
   handleChange = (e) => {
     this.setState({ [e.target.id]: e.target.value });
-    // console.log(this.state);
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("/api/users", {
+      .post("/api/signup", {
         name: this.state.name,
         email: this.state.email,
         password: this.state.password,
@@ -68,20 +66,14 @@ class Singup extends React.Component {
       .then((result) => {
         console.log("result   ", result);
         this.setState({ singup: "sign up success please sign in" });
-        // setTimeout(function () {
-        //   window.location.href = "/Signin";
-        // }, 2000);
+        this.props.history.push(`/Signin`);
       })
       .catch((err) => {
         console.log("ERROR FROM AXIOS ", err);
         this.setState({ singup: "please use a different email or user name" });
-        // setTimeout(function () {
-        //   window.location.href = "/Signup";
-        // }, 2000);
+        this.props.history.push(`/Signup`)
+     
       });
-    // } else {
-    //   alert("The email is aready used");
-    // }
   };
 
   render() {
@@ -89,7 +81,6 @@ class Singup extends React.Component {
     const values = { name, password, email, step };
     return (
       <div>
-        <Navbar />
         <form id="signup">
           <h1 className="header"> sign up </h1>
           <h2>{this.state.singup}</h2>
@@ -161,10 +152,6 @@ class Singup extends React.Component {
                       Logout
                     </Button>
                   </form>
-                  {/* <img
-                  alt="profile picture"
-                  src={firebase.auth().currentUser.photoURL}
-                /> */}
                 </div>
               </span>
             ) : (
