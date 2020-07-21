@@ -128,6 +128,21 @@ body {
   padding-bottom: 2px;
   margin-left: 100px;
 }
+#info {
+  font-size: 16px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+#info,
+td,
+th {
+  border: 1px solid #000000;
+  padding: 8px;
+  margin-top: 70px;
+}
 
 /* 
 .check_button{

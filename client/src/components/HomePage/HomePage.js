@@ -18,6 +18,18 @@ airports.map((element) => {
 });
 
 class HomePage extends React.Component {
+  renderTableData = () => {
+    return this.props.Trans.map((element, index) => {
+      const { expensesTypes, description, amount } = element;
+      return (
+        <tr key={index}>
+          <td>{expensesTypes}</td>
+          <td>{description}</td>
+          <td>{amount}</td>
+        </tr>
+      );
+    });
+  };
   constructor(props) {
     super(props);
     this.items = airportName;
@@ -219,19 +231,20 @@ class HomePage extends React.Component {
           <div>
             <form>
               <table id="info">
-                <tbody>
+                <thead>
                   <tr>
-                    <td style={{ width: "50px", padding: "20px" }}>ID</td>
-                    <td style={{ width: "50px", padding: "20px" }}>Direct</td>
-                    <td style={{ width: "50px", padding: "20px" }}>MinPrice</td>
-                    <td style={{ width: "50px", padding: "20px" }}>
+                    <th style={{ width: "50px", padding: "20px" }}>ID</th>
+                    <th style={{ width: "50px", padding: "20px" }}>Direct</th>
+                    <th style={{ width: "50px", padding: "20px" }}>MinPrice</th>
+                    <th style={{ width: "50px", padding: "20px" }}>
                       QuoteDateTime
-                    </td>
-                    <td style={{ width: "50px", padding: "20px" }}>
+                    </th>
+                    <th style={{ width: "50px", padding: "20px" }}>
                       Departure Date
-                    </td>
+                    </th>
                   </tr>
-                </tbody>
+                </thead>
+                <tbody>{this.renderTableData()}</tbody>
               </table>
             </form>
             {table1}
