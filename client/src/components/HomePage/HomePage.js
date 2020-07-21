@@ -192,19 +192,11 @@ class HomePage extends React.Component {
             <h1 className="pricem">{item.cost}</h1>
           </span>
         </div>
-        <div className="App">
-      <Pdf targetRef={ref} filename="code-example.pdf">
-        {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
-      </Pdf>
-      <div ref={ref}>
-        <h1>Hello CodeSandbox</h1>
-        <h2>Start editing to see some magic happen!</h2>
-      </div>
-    </div>
+     
       </form>
     ));
     return (
-      <div>
+      <div ref={ref}>
         <Navbar />
         <div className="main">
           <label>Depart</label>
@@ -252,6 +244,15 @@ class HomePage extends React.Component {
           <br></br>
           {table1}
         </div>
+        <div className="App">
+      <Pdf targetRef={ref} filename="code-example.pdf">
+        {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
+      </Pdf>
+      <div >
+        <h1>Hello CodeSandbox</h1>
+        <h2>Naser is our HERO</h2>
+      </div>
+    </div>
       </div>
     );
   }
