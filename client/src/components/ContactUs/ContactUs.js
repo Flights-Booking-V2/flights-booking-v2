@@ -28,9 +28,9 @@ class ContactForm extends Component {
     };
     emailjs.send(
       "gmail",
-      "template_XXXXXXXX",
-      templateParams,
-      "user_XXXXXXXXXXXXXXXXXXXX"
+      "flightsbookingv2",
+      { className: "text-primary" },
+      "user_YWb6SpcJUMxwFCBTUZfY2"
     );
     this.resetForm();
   }
@@ -90,7 +90,7 @@ class ContactForm extends Component {
               onChange={this.handleChange.bind(this, "subject")}
               placeholder="Subject"
             >
-              <option value="Operating Expenses "> </option>
+              <option value="Operating Expenses ">Operating Expenses </option>
               <option value="Financial Expenses">Financial Expenses</option>
               <option value="Extraordinary Expenses">
                 Extraordinary Expenses

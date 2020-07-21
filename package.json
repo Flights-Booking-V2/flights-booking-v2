@@ -17,7 +17,7 @@
     "bootstrap": "^4.5.0",
     "concurrently": "^5.2.0",
     "cors": "^2.8.5",
-    "emailjs-com": "^2.4.1",
+    "emailjs-com": "^2.6.3",
     "express": "^4.17.1",
     "firebase": "^7.16.0",
     "mongoose": "^5.9.24",
