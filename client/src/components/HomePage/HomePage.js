@@ -1,8 +1,11 @@
 import React from "react";
 import Navbar from "../NavBar/NavBar.js";
 import "./style.css";
+import Pdf from "react-to-pdf";
 const airports = require("airport-data");
 const axios = require("axios");
+// var pdf = require('html-pdf');
+const ref = React.createRef();
 
 var airportName = [];
 var airportcode = [];
@@ -189,10 +192,11 @@ class HomePage extends React.Component {
             <h1 className="pricem">{item.cost}</h1>
           </span>
         </div>
+     
       </form>
     ));
     return (
-      <div>
+      <div ref={ref}>
         <Navbar />
         <div className="main">
           <label>Depart</label>
@@ -240,9 +244,19 @@ class HomePage extends React.Component {
           <br></br>
           {table1}
         </div>
+        <div className="App">
+      <Pdf targetRef={ref} filename="code-example.pdf">
+        {({ toPdf }) => <button onClick={toPdf}>Print Ticket</button>}
+      </Pdf>
+      <div >
+        {/* <h1>Joy of Travel</h1>
+        <h2></h2> */}
+      </div>
+    </div>
       </div>
     );
   }
 }
 
 export default HomePage;
+ 
