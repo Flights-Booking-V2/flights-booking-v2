@@ -246,11 +246,11 @@ class HomePage extends React.Component {
         </div>
         <div className="App">
       <Pdf targetRef={ref} filename="code-example.pdf">
-        {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
+        {({ toPdf }) => <button onClick={toPdf}>Print Ticket</button>}
       </Pdf>
       <div >
-        <h1>Hello CodeSandbox</h1>
-        <h2>Naser is our HERO</h2>
+        {/* <h1>Joy of Travel</h1>
+        <h2></h2> */}
       </div>
     </div>
       </div>
