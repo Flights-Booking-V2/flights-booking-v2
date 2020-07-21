@@ -9,7 +9,7 @@ from the command line:
 
     npm install
     npm install /client
-    bpm run dev
+    npm run dev
 
 0. Make sure master is up to date
    git checkout master
