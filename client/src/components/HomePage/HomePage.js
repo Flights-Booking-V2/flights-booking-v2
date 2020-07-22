@@ -253,11 +253,15 @@ class HomePage extends React.Component {
             {table1}
           </div>
         </div>
-        <div className="App">
-          <Pdf targetRef={ref} filename="code-example.pdf">
-            {({ toPdf }) => <button onClick={toPdf}>Print Ticket</button>}
-          </Pdf>
-        </div>
+        <div className="AppA">
+      <Pdf targetRef={ref} filename="code-example.pdf">
+        {({ toPdf }) => <button onClick={toPdf}>Print Ticket</button>}
+      </Pdf>
+      <div >
+        {/* <h1>Joy of Travel</h1>
+        <h2></h2> */}
+      </div>
+    </div>
       </div>
     );
   }
