@@ -8,13 +8,13 @@
     background: url(bg.png) no-repeat center;
     
     background-size: cover;
-    padding: 40px 0;
+    padding: 0px 0px 0px 0px;
   }
   
    h1{
     text-align: center;
     color: #ddd;
- 
+    font-family: "montserrat",sans-serif
 }
    
 .border{
@@ -38,7 +38,7 @@
     margin: 16px 0;
     border: 0;
     background: rgba(2, 1, 1, 0);
-    padding: 20px 40px;
+    padding: 0px 40px;
     outline: none;
     color: #ddd;
     transition: 0.5s;
