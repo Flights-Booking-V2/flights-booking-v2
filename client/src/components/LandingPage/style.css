@@ -20,15 +20,16 @@ h1{
 
   
 
-  button{
+  /* .P1{
     margin-top: 0px;
     margin-bottom: 20px;
-    background: #487eb0;
-    color: #fff;
+    background: #000203;
+    color: rgb(0, 0, 0);
     border-radius: 44px;
     cursor: pointer;
     transition: 0.8s;
-  
+    font-size: 1.5em;
+
     width: 15%;
     padding: 5 16px;
     height: 44px;
@@ -37,15 +38,42 @@ h1{
     outline: none;
     border: none;
     font-family: "montserrat",sans-serif; 
-}
-button:hover{
+  } */
+    .PTN:hover{
     transform: scale(0.96);
+    background-color: rgb(255, 255, 255);
   }
 
-  p{
+  /* p{
     margin-top: 50px;
     font-family: 'Permanent Marker', cursive;
-    color: rgb(0, 91, 211);
+    color: rgb(0, 0, 0);
     font-size: 20px;
+  } */
+   .PTN {
+    margin-top: 10px;
+    font-family: Georgia, serif;
+    
+    font-size: 35px;
+    width: 15%;
+    padding: 5 16px;
+    height: 44px;
+    text-align: center;
+    box-sizing: border-box;
+    border: none;
+    margin-top: 0px;
+    margin-bottom: 20px;
+   background: rgba(131, 158, 216, 0.924);
+    border-radius: 44px;
+    cursor: pointer;
+    transition: 0.8s;
+   color: rgb(0, 0, 0);
+   font-size: 1.5em;
+  
+  
+  
+  
+  
+  
   }
   

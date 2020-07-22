@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import * as emailjs from "emailjs-com";
 import Navbar from "../NavBar/NavBar";
-
+import "./style.css";
 import {
   Button,
   FormFeedback,
@@ -50,10 +50,11 @@ class ContactUs extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div className="al">
         <Navbar />
         {/* <Layout> */}
-        <h1>Give us your informations here</h1>
+        <h1>Contact Us</h1>
+        <div class="border"></div>
         <Form onSubmit={this.handleSubmit.bind(this)}>
           <FormGroup controlId="formBasicEmail">
             <Label className="text-muted">Email address</Label>

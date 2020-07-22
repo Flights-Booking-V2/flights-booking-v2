@@ -82,7 +82,7 @@ class Singup extends React.Component {
     return (
       <div>
         <form id="signup">
-          <h1 className="header"> sign up </h1>
+          <h1 className="header"> sign Up </h1>
           <h2>{this.state.singup}</h2>
           <label id="label">User Name</label>
           <input
