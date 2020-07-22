@@ -57,7 +57,6 @@ body {
    
 }
 
-
 .check_button:hover {
   background-color: #f2e6ff;
   color: rgb(89, 79, 144);
@@ -72,9 +71,9 @@ body {
   padding: 44px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   border-radius: 5px;
-  color :#744545;
+  color: #744545;
   /* box-shadow: 7px 5px #888888; */
- width: auto;
+  width: auto;
 }
 
 .Carrier {
@@ -83,8 +82,8 @@ body {
   margin-top: -28px;
   margin-left: -28px;
   font-size: 1.2em;
-  border-bottom:1px solid #660000;
-  margin-bottom:0;
+  border-bottom: 1px solid #660000;
+  margin-bottom: 0;
 }
 #price {
   font-size: 30px;
@@ -93,55 +92,58 @@ body {
   color: #660000;
 }
 
-
+#info {
+  color: #660000;
+}
 .pricem {
   align-items: center;
   margin-top: 20px;
   font-size: 30px;
   margin-left: 15px;
-  color:#660000;
+  color: #660000;
 }
 
-
-.L{
-  color: rgb(81, 73, 126); 
+.L {
+  color: rgb(81, 73, 126);
   font-size: 30px;
   line-height: 80px;
   padding: 0 px;
   font-weight: bold;
   margin-right: px;
-
 }
 
-.from.input1{
+.from.input1 {
   padding-bottom: 2px;
   margin-left: 2px;
 }
-.depart.input1{
+.depart.input1 {
   padding-bottom: 2px;
-
 }
 
-
-
-
-.to.input1{
-
+.to.input1 {
   padding-bottom: 2px;
- margin-right: 3px;
+  margin-right: 3px;
 }
 
-
-
-
-
-.return.input1{
-
-  padding-bottom:2px;
+.return.input1 {
+  padding-bottom: 2px;
   margin-left: 100px;
 }
+#info {
+  font-size: 16px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
 
-
+#info,
+td,
+th {
+  border: 1px solid #000000;
+  padding: 8px;
+  margin-top: 70px;
+}
 
 /* 
 .check_button{
@@ -163,8 +165,8 @@ body {
 
 } */
 
-.M{
-  color: rgb(81, 73, 126); 
+.M {
+  color: rgb(81, 73, 126);
   font-size: 30px;
   line-height: 80px;
   padding: 0 px;
