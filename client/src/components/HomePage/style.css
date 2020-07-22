@@ -54,7 +54,6 @@ body {
   /* background-color: rgb(12, 2, 68); */
   font-weight: bold;
   margin-left: 100px;
-   
 }
 
 .check_button:hover {
@@ -145,7 +144,6 @@ th {
   margin-top: 70px;
 }
 
-
 /* 
 .check_button{
 
@@ -175,20 +173,14 @@ th {
   margin-left: px;
 }
 
-.AppA{
+.AppA {
   border-radius: 20px;
-  
-  
- 
+
   font-size: 1.1em;
   outline: none;
-  
+
   color: rgb(111, 149, 155);
-  
+
   font-weight: bold;
   margin-left: 10%;
-  
-
 }
-
-
