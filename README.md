@@ -1,6 +1,6 @@
 # Flight Booking
 
-> Flight Booking version 2
+> Flight Booking version 2.0
 
 ## Team
 
