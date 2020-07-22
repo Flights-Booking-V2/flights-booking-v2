@@ -241,13 +241,13 @@ class HomePage extends React.Component {
               <table id="info">
                 <thead>
                   <tr>
-                    <th style={{ width: "50px", padding: "20px" }}>ID</th>
-                    <th style={{ width: "50px", padding: "20px" }}>Direct</th>
-                    <th style={{ width: "50px", padding: "20px" }}>MinPrice</th>
-                    <th style={{ width: "50px", padding: "20px" }}>
+                    <th style={{ width: "20px", padding: "20px" }}>ID</th>
+                    <th style={{ width: "20px", padding: "20px" }}>Direct</th>
+                    <th style={{ width: "20px", padding: "20px" }}>MinPrice</th>
+                    <th style={{ width: "40px", padding: "20px" }}>
                       QuoteDateTime
                     </th>
-                    <th style={{ width: "50px", padding: "20px" }}>
+                    <th style={{ width: "30px", padding: "20px" }}>
                       Departure Date
                     </th>
                   </tr>
