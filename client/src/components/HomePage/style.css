@@ -142,6 +142,10 @@ th {
   border: 1px solid #000000;
   padding: 8px;
   margin-top: 70px;
+  border-collapse: collapse;
+}
+table {
+  border-collapse: collapse;
 }
 
 /* 
