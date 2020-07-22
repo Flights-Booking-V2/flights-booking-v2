@@ -77,9 +77,11 @@ class Signin extends Component {
     return (
       <div>
         <form className="login">
-          <h1 className="header">Sign In</h1>
+          <h1 className="header">Please sign in to continue</h1>
+          <br />
+          <br />
           <h2>{this.state.singip}</h2>
-          <label className="email_lab">Email </label>
+          {/* <label className="email_lab">Email </label> */}
           <input
             className="email_input input"
             type="email"
@@ -89,7 +91,7 @@ class Signin extends Component {
             onChange={this.handleChange.bind(this)}
           />
           <br />
-          <label className="Password_lab">Password </label>
+          {/* <label className="Password_lab">Password </label> */}
           <input
             className="password_input input"
             type="password"
@@ -104,6 +106,10 @@ class Signin extends Component {
             onClick={this.handleSubmit.bind(this)}
           >
             Sign In
+          </button>
+          <br />
+          <button className="PTN">
+            <Link to="/Signup"> Sign Up </Link>
           </button>
         </form>
         <div>{this.state.falseSignin ? "Please Check your info" : ""}</div>

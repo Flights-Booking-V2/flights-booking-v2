@@ -8,17 +8,17 @@ class AboutUs extends React.Component {
       <div className="about">
         <NavBar />
         <div className="Home">
-        <h1>About Us.. </h1>
-        <h1>Flight Booking V2</h1>
-        <div className="P">
-        <h2>Our team is:</h2>
-        <h3>Scrum Master: Khaled Abousheikh</h3>
-        <h3>
-          Development Team Members: Safaa Alshami , Anas Abdelwahed , Nasr
-          Shamalkh and Mohammed AbuShaaban
-        </h3>
-        <h2>"If We Don't Have Trust, We Have Nothing."</h2>
-        <h3>
+          <h1>About Us.. </h1>
+          {/* <h1>Flight Booking V2</h1> */}
+          <div className="P">
+            <h2>Our team is:</h2>
+            <h3>Scrum Master: Khaled Abousheikh</h3>
+            <h3>
+              Development Team Members: Safaa Alshami , Anas Abdelwahed , Nasr
+              Shamalkh and Mohammed AbuShaaban
+            </h3>
+            <h2>"If We Don't Have Trust, We Have Nothing."</h2>
+            {/* <h3>
           Flights booking is a simple flights booking application. Allows you to
           pick a flight ticket by choosing current location "city" and
           destination location "city".
@@ -40,8 +40,8 @@ class AboutUs extends React.Component {
           !!!
         </p>
         <h2>Closing and Call to Action</h2>
-        <p>If you like our idea, Please send us your feedback.</p>
-        </div>
+        <p>If you like our idea, Please send us your feedback.</p> */}
+          </div>
         </div>
       </div>
     );

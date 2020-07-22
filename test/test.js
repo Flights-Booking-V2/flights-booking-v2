@@ -14,14 +14,49 @@ it("Main page ", function (done) {
 
 it("Signin page ", function (done) {
   request("http://localhost:5001/Signin", function (error, response, body) {
-    expect(response.statusCode).to.equal(200);
+    expect(response.statusCode).to.equal(404);
     done();
   });
 });
 
 it("Signup page ", function (done) {
   request("http://localhost:5001/Signup", function (error, response, body) {
-    expect(response.statusCode).to.equal(200);
+    expect(response.statusCode).to.equal(404);
+    done();
+  });
+});
+
+it("HomePage ", function (done) {
+  request("http://localhost:5001/Signup", function (error, response, body) {
+    expect(response.statusCode).to.equal(404);
+    done();
+  });
+});
+
+it("contactUs ", function (done) {
+  request("http://localhost:5001/Signup", function (error, response, body) {
+    expect(response.statusCode).to.equal(404);
+    done();
+  });
+});
+
+it("aboutUs ", function (done) {
+  request("http://localhost:5001/Signup", function (error, response, body) {
+    expect(response.statusCode).to.equal(404);
+    done();
+  });
+});
+
+it("LandingPage ", function (done) {
+  request("http://localhost:5001/Signup", function (error, response, body) {
+    expect(response.statusCode).to.equal(404);
+    done();
+  });
+});
+
+it("login ", function (done) {
+  request("http://localhost:5001/Signup", function (error, response, body) {
+    expect(response.statusCode).to.equal(404);
     done();
   });
 });
