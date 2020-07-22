@@ -64,15 +64,16 @@ class Singup extends React.Component {
         password: this.state.password,
       })
       .then((result) => {
+        alert("sign up success please sign in");
         console.log("result   ", result);
         this.setState({ singup: "sign up success please sign in" });
         this.props.history.push(`/Signin`);
       })
       .catch((err) => {
+        alert("please use a different email or user name");
         console.log("ERROR FROM AXIOS ", err);
         this.setState({ singup: "please use a different email or user name" });
-        this.props.history.push(`/Signup`)
-     
+        this.props.history.push(`/Signup`);
       });
   };
 

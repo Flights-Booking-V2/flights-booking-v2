@@ -1,28 +1,40 @@
 import React, { Component } from "react";
 import "./style.css";
-import { login } from './LoginFunc';
-import {BrowserRouter ,Router,Route,Link,Switch,Redirect } from 'react-router-dom'
+import { login } from "./LoginFunc";
+import {
+  BrowserRouter,
+  Router,
+  Route,
+  Link,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
-const authintication={
-    isLoggedIn : false,
-    onAuthintication(){
-      this.isLoggedIn=true
-    },
-    ofAuthintication(){
-      this.isLoggedIn=false
-    },
-    getLoginStatus(){
-    return this.isLoggedIn
-    }
-}
+const authintication = {
+  isLoggedIn: false,
+  onAuthintication() {
+    this.isLoggedIn = true;
+  },
+  ofAuthintication() {
+    this.isLoggedIn = false;
+  },
+  getLoginStatus() {
+    return this.isLoggedIn;
+  },
+};
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
-    <Route {...rest} render={(props) => (
-      authintication.getLoginStatus() === true
-        ? <Component {...props} />
-        : <Redirect to='/' />
-    )} />
-  )
+  <Route
+    {...rest}
+    render={(props) =>
+      authintication.getLoginStatus() === true ? (
+        <Component {...props} />
+      ) : (
+        <Redirect to="/" />
+      )
+    }
+  />
+);
 class Signin extends Component {
   constructor(props) {
     super(props);
@@ -30,7 +42,7 @@ class Signin extends Component {
       email: "",
       password: "",
       signip: "",
-      falseSignin: false
+      falseSignin: false,
     };
   }
   handleChange(e) {
@@ -42,21 +54,24 @@ class Signin extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = {
-        email: this.state.email,
-        password: this.state.password
-    }
-    login(user).then(res => {
-        if(res) {
-            authintication.onAuthintication();
-            this.setState({signip: 'sign in successfull'});
-            this.props.history.push('/HomePage');
-            console.log(res);
+      email: this.state.email,
+      password: this.state.password,
+    };
+    login(user)
+      .then((res) => {
+        if (res) {
+          alert("login successfull");
+          authintication.onAuthintication();
+          this.setState({ signip: "sign in successfull" });
+          this.props.history.push("/HomePage");
+          console.log(res);
         }
-    })
-    .catch((err) => {
-        console.log('Error in logging', err);
-        this.setState({falseSignin: true});
-    })
+      })
+      .catch((err) => {
+        alert("your email or password isn't correct");
+        console.log("Error in logging", err);
+        this.setState({ falseSignin: true });
+      });
   }
   render() {
     return (
@@ -91,15 +106,10 @@ class Signin extends Component {
             Sign In
           </button>
         </form>
-        <div>{this.state.falseSignin ? 'Please Check your info': ''}</div>
+        <div>{this.state.falseSignin ? "Please Check your info" : ""}</div>
       </div>
     );
   }
 }
 
-export{
-
-    authintication,
-    Signin,
-    PrivateRoute,   
-  }
+export { authintication, Signin, PrivateRoute };
