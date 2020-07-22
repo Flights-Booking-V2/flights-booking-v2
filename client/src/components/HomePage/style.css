@@ -3,7 +3,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   height: 30%;
-  font-family: "Numans", sans-serif;
+  font-family: Georgia, serif;
   top: 40%;
   left: 40%;
 }
@@ -43,17 +43,18 @@ body {
 }
 
 .check_button {
-  border-radius: 50px;
-  border: 5;
-  width: 20%;
-  height: 50px;
-  font-size: 2.6em;
+  border-radius: 20px;
+  border: 20;
+  width: 18%;
+  height: 60px;
+  font-size: 1.5em;
   outline: none;
   margin-top: 30px;
-  color: white;
+  color: rgb(255, 255, 255);
   /* background-color: rgb(12, 2, 68); */
   font-weight: bold;
   margin-left: 100px;
+   
 }
 
 .check_button:hover {
@@ -171,4 +172,20 @@ th {
   padding: 0 px;
   font-weight: bold;
   margin-left: px;
+}
+
+.AppA{
+  border-radius: 20px;
+  
+  
+ 
+  font-size: 1.1em;
+  outline: none;
+  
+  color: rgb(111, 149, 155);
+  
+  font-weight: bold;
+  margin-left: 10%;
+  
+
 }
