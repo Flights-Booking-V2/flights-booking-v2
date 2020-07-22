@@ -133,17 +133,22 @@ body {
   font-size: 16px;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
+  border-spacing: 2;
+  width: 60%;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  margin-top: 10%;
+  font-size: 1.5em;
 }
 
 #info,
 td,
 th {
-  border: 1px solid #000000;
+  border: 6px solid #000000e7;
   padding: 8px;
   margin-top: 70px;
-
+  font-weight: bold;
 }
 
 
