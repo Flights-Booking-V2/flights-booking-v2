@@ -1,0 +1,40 @@
+.about {
+  background-color: dimgrey;
+  width: 100%;
+  padding-block-end: 10%;
+  background: url(about.jpg) no-repeat center;
+  font-weight: Century Gothic;
+  background-size: 100%;
+  padding: 0px 0px 850px 0px;
+}
+
+.Home {
+  height: 50%;
+  width: 70%;
+  background-color: rgb(0, 0, 0, 0.6);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Home h1 {
+  color: white;
+  margin-top: 15px;
+  font-family: "montserrat";
+}
+
+.P {
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+  font-size: large;
+}
+
+.Home h2 {
+  font-family: "montserrat";
+  color: rgb(81, 170, 243);
+}
+
+.Home h3 {
+  font-family: "montserrat";
+}

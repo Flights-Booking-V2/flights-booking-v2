@@ -1,69 +1,80 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "montserrat",sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat";
+}
 
-  .al{
-    background: url(bg.png) no-repeat center;
-    
-    background-size: cover;
-    padding: 40px 0;
-  }
-  
-   h1{
-    text-align: center;
-    color: #ddd;
- 
+.al {
+  background: url(bg.png) no-repeat center;
+
+  background-size: cover;
+  padding: 0px 0px 0px 0px;
 }
-   
-.border{
-    width: 100px;
-    height: 10px;
-    background: #07070700;
-    margin: 50px ;
-  }
-  
-  input{
-    max-width: 600px;
-    margin: auto;
-    padding:  10px;
-    overflow: hidden;
-  }
-  
-  .text-muted{
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 16px 0;
-    border: 0;
-    background: rgba(2, 1, 1, 0);
-    padding: 20px 40px;
-    outline: none;
-    color: #ddd;
-    transition: 0.5s;
-  }
-  .text-muted:focus{
-    box-shadow: 0 0 10px 4px #34495e;
-  }
-  textarea{
-    resize: none;
-    height: 120px;
-    width: 500px;
+
+h1 {
+  text-align: center;
+  color: #ddd;
+  font-family: "montserrat";
 }
-  Button{
-    float: center;
-    border: 5;
-    background: #3f576e;
-    color: #fff;
-    padding: 12px 50px;
-    border-radius: 22px;
-    cursor: pointer;
-    transition: 0.5s;
-    font-size: 1.5em; 
-  }
-  
-  Button{
-    background: #2980b9;
-  } 
-  
+
+.border {
+  width: 100px;
+  height: 10px;
+  background: #07070700;
+  margin: 50px;
+}
+
+input {
+  outline: none;
+  border-radius: 50px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 35px;
+  border: 0;
+  padding-left: 30px;
+}
+
+.text-muted {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border: 0;
+  background: rgba(2, 1, 1, 0);
+  padding: 0px 40px;
+  outline: none;
+  color: #ddd;
+  transition: 0.5s;
+}
+.text-muted:focus {
+  box-shadow: 0 0 10px 4px #34495e;
+}
+textarea {
+  resize: none;
+  height: 120px;
+  width: 500px;
+}
+Button {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  background: rgba(131, 158, 216, 0.924);
+  color: #fff;
+  border-radius: 44px;
+  cursor: pointer;
+  transition: 0.8s;
+  width: 20%;
+  padding: 5 16px;
+  height: 44px;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: "montserrat";
+  font-size: 1.5em;
+}
+
+.Button:hover {
+  background-color: #f2e6ff;
+  color: rgb(63, 155, 172);
+}

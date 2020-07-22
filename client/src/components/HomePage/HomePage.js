@@ -188,42 +188,47 @@ class HomePage extends React.Component {
       <div ref={ref}>
         <Navbar />
         <div className="main">
-          <label className="L">Depart</label>
+          {/* <label className="L">Depart</label> */}
           <input
-            className="from input1"
+            className="input1"
             value={this.state.departure}
             onChange={this.onTextChanged}
             type="text"
             name="departure"
+            placeholder="Choose your departure city"
           />
           {this.renderSuggestions()}
-          <label className="L">From</label>
+          {/* <label className="L">From</label> */}
 
           <input
-            className="depart input1"
+            className="input1"
             type="date"
             value={this.state.depDate}
             onChange={this.handleChange}
             name="depDate"
+            placeholder="Pick departure date"
           />
           <br></br>
-          <label className="L">Return</label>
+          {/* <label className="L">Return</label> */}
           <input
-            className="to input1"
+            className="input1"
             value={this.state.arrival}
             onChange={this.onTextChanged2}
             type="text"
             name="arrival"
+            placeholder="Choose your arrival city"
           />
           {this.renderSuggestions2()}
-          <label className="M">To</label>
+          {/* <label className="M">To</label> */}
           <input
-            className="return input1"
+            className="input1"
             type="date"
             value={this.state.arrDate}
             onChange={this.handleChange}
             name="arrDate"
+            placeholder="Pick arrival date"
           />
+          <br />
           <br />
           <button className="check_button" onClick={() => this.submit()}>
             Check
@@ -236,13 +241,13 @@ class HomePage extends React.Component {
               <table id="info">
                 <thead>
                   <tr>
-                    <th style={{ width: "50px", padding: "20px" }}>ID</th>
-                    <th style={{ width: "50px", padding: "20px" }}>Direct</th>
-                    <th style={{ width: "50px", padding: "20px" }}>MinPrice</th>
-                    <th style={{ width: "50px", padding: "20px" }}>
+                    <th style={{ width: "20px", padding: "20px" }}>ID</th>
+                    <th style={{ width: "20px", padding: "20px" }}>Direct</th>
+                    <th style={{ width: "20px", padding: "20px" }}>MinPrice</th>
+                    <th style={{ width: "40px", padding: "20px" }}>
                       QuoteDateTime
                     </th>
-                    <th style={{ width: "50px", padding: "20px" }}>
+                    <th style={{ width: "30px", padding: "20px" }}>
                       Departure Date
                     </th>
                   </tr>
@@ -254,14 +259,16 @@ class HomePage extends React.Component {
           </div>
         </div>
         <div className="AppA">
-      <Pdf targetRef={ref} filename="code-example.pdf">
-        {({ toPdf }) => <button onClick={toPdf}>Print Ticket</button>}
-      </Pdf>
-      <div >
-        {/* <h1>Joy of Travel</h1>
-        <h2></h2> */}
-      </div>
-    </div>
+          <Pdf targetRef={ref} filename="code-example.pdf">
+            {({ toPdf }) => (
+              <button className="check_button" onClick={toPdf}>
+                Print Ticket
+              </button>
+            )}
+          </Pdf>
+          <div>{/* <h1>Joy of Travel</h1>
+        <h2></h2> */}</div>
+        </div>
       </div>
     );
   }

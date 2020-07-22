@@ -18,13 +18,13 @@ class NavBar extends React.Component {
           <NavLink exact to="/HomePage">Home </NavLink>
         </div>
         <div className="navbar_item">
-          <NavLink to="/AboutUs">About us</NavLink>
+          <NavLink to="/AboutUs">About-us</NavLink>
         </div>
         <div className="navbar_item">
-          <NavLink to="/ContactUs">Contact us</NavLink>
+          <NavLink to="/ContactUs">Contact-us</NavLink>
         </div>
         <div className="navbar_item">
-          <NavLink to='/'>Log out</NavLink>
+          <NavLink to='/'>Log-out</NavLink>
         </div>
       </nav>
     );
