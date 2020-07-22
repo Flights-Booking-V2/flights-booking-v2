@@ -17,6 +17,8 @@
     "bcryptjs": "^2.4.3",
     "concurrently": "^5.2.0",
     "cors": "^2.8.5",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "express": "^4.17.1",
     "file-saver": "^2.0.2",
     "firebase": "^7.16.0",
