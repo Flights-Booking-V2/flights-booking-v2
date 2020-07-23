@@ -12,9 +12,9 @@
 
 1. [Usage](#Usage)
 1. [Requirements](#requirements)
-   1. [Backend ](#Backend)
+   1. [Backend](#Backend)
    1. [Frontend](#Frontend)
-   1. [Frontend](#Frontend)
+   1. [Testing](#Testing)
 1. [Development](#development)
    1. [Installing Dependencies](#installing-dependencies)
    1. [Tasks](#tasks)
@@ -27,7 +27,7 @@
 
 ## Requirements
 
-### Installing Dependencies
+### Backend
 
 - mongoose
 - Nodejs
@@ -41,7 +41,7 @@
 - jwt-decode
 - concurrently
 
-### Installing Dependencies
+### Frontend
 
 - axios
 - bcryptjs
@@ -59,7 +59,7 @@
 - firebase
 - React Credit cards
 
-### Installing Dependencies
+### Testing
 
 - @testing-library/jest-dom
 - @testing-library/react
