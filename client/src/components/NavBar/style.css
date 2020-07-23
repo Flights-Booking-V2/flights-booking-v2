@@ -31,7 +31,7 @@
 }
 
 .navbar_item a {
-  padding: 16px 16px;
+  /* padding: 16px 16px; */
   cursor: pointer;
   text-decoration: none;
   color: rgb(0, 0, 0);
@@ -39,9 +39,11 @@
   border-radius: 3px;
   text-transform: uppercase;
   display: inline-block;
-  line-height: 80px;
   margin: 0 1px;
+  width: 115px;
   font-weight: 900;
+  /* border: 1px solid black; */
+  /* float: left; */
 }
 
 .navbar_item a:hover {

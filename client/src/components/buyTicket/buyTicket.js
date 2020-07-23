@@ -2,6 +2,7 @@ import React from "react";
 import Card from "react-credit-cards";
 import "./styles.css";
 import SupportedCards from "./Cards";
+import { Redirect } from "react-router-dom";
 
 import {
   formatCreditCardNumber,
@@ -22,7 +23,16 @@ export default class ReactCreditCards extends React.Component {
     focused: "",
     formData: null,
   };
-
+  setRedirect = () => {
+    this.setState({
+      redirect: true,
+    });
+  };
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to="/" />;
+    }
+  };
   handleCallback = ({ issuer }, isValid) => {
     if (isValid) {
       this.setState({ issuer });
@@ -67,8 +77,7 @@ export default class ReactCreditCards extends React.Component {
     return (
       <div key="Payment">
         <div className="App-payment">
-          <h1>React Credit Cards</h1>
-          <h4>Beautiful credit cards for your payment forms</h4>
+          <h1>Paying using Credit Cards</h1>
           <Card
             number={number}
             name={name}
@@ -91,7 +100,7 @@ export default class ReactCreditCards extends React.Component {
               />{" "}
               <br />
               <br />
-              <small>E.g.: 49..., 51..., 36..., 37...</small>
+              {/* <small>E.g.: 49..., 51..., 36..., 37...</small> */}
             </div>
             <div className="form-group">
               <input
@@ -132,7 +141,13 @@ export default class ReactCreditCards extends React.Component {
             </div>
             <input type="hidden" name="issuer" value={issuer} />
             <div className="form-actions">
-              <button className="btn btn-primary btn-block">PAY</button>
+              <button onClick={() => alert("Pay confirmed")} className="btn">
+                PAY
+              </button>
+              {this.renderRedirect()}
+              <button className="btn" onClick={this.setRedirect}>
+                Log Out
+              </button>
             </div>
           </form>
           {formData && (
