@@ -40,10 +40,17 @@ input[type="date"]:valid:before {
 #info,
 td,
 th {
-  border: 2px solid #000000;
+  /* border: 2px solid #000000; */
   padding: 8px;
   margin-top: 70px;
   border-collapse: collapse;
+}
+tr {
+  background-color: whitesmoke;
+  border-radius: 30px;
+}
+th {
+  background-color: lightblue;
 }
 .check_button {
   margin-top: 0px;
@@ -77,6 +84,10 @@ th {
   padding-bottom: 33px;
   border-radius: 33px;
   color: white;
+}
+tr:hover {
+  background-color: lightblue;
+  border-radius: 20px;
 }
 /*
 
