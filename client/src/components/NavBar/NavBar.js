@@ -22,7 +22,7 @@ class NavBar extends React.Component {
           <NavLink to="/AboutUs">About us</NavLink>
         </div>
         <div className="navbar_item">
-          <NavLink to="/ContactUs">Contact us</NavLink>
+          <NavLink to="/ContactUs">Contact</NavLink>
         </div>
         <div className="navbar_item">
           <NavLink to="/">Log out</NavLink>
