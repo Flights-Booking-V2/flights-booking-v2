@@ -82,7 +82,7 @@ class Singup extends React.Component {
     const { name, password, email, step } = this.state;
     const values = { name, password, email, step };
     return (
-      <div>
+      <div className="sign-up">
         <form id="signup">
           <h1 className="header"> Please sign up to continue </h1>
           <br />
@@ -120,8 +120,9 @@ class Singup extends React.Component {
             onChange={this.handleChange}
           ></input>
           <br />
+
           <button
-            className="sigup_button"
+            className="signup_button"
             onClick={this.handleSubmit.bind(this)}
           >
             Sign Up

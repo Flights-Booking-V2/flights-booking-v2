@@ -8,15 +8,17 @@ class AboutUs extends React.Component {
       <div className="about">
         <NavBar />
         <div className="Home">
-          <h1>About Us.. </h1>
+          <h1>About Us</h1>
           {/* <h1>Flight Booking V2</h1> */}
           <div className="P">
             <h2>Our team is:</h2>
             <h3>Scrum Master: Khaled Abousheikh</h3>
-            <h3>
-              Development Team Members: Safaa Alshami , Anas Abdelwahed , Nasr
-              Shamalkh and Mohammed AbuShaaban
-            </h3>
+            <h4>Development Team Members:</h4>
+            <span>Mohammed Abu Shaaban </span>
+            <span>Safaa Alshami </span>
+            <span>Nasr Shamalkh </span>
+            <span>Anas Abdelwahed </span>
+
             <h2>"If We Don't Have Trust, We Have Nothing."</h2>
             {/* <h3>
           Flights booking is a simple flights booking application. Allows you to

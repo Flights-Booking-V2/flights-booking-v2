@@ -1,3 +1,8 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 /* 
 div {
     width: 100px;
@@ -38,14 +43,30 @@ div {
     color: rgb(0, 0, 0);
     font-size: 20px;
   } */
-.PTN {
-  margin-top: 0px;
-  margin-bottom: 20px;
-  background: rgba(131, 158, 216, 0.924);
-  color: #fff;
+
+.landing-page {
+  transform: translateY(5%);
+}
+
+.landing-page h1 {
+  text-align: center;
+  padding: 10px;
+  width: 700px;
+  margin: 20px auto;
+  border-radius: 25px;
+  border: 2px solid rgb(255, 255, 255);
+  transform: translatey(170px);
+  background-color: rgba(71, 71, 71, 0.712);
+  height: 70px;
+  font-weight: 850;
+  color: white;
+}
+
+.landing-page .PTN {
+  background: rgb(0, 162, 255);
+  color: rgb(255, 255, 255);
   border-radius: 44px;
   cursor: pointer;
-  transition: 0.8s;
   width: 20%;
   padding: 5 16px;
   height: 44px;
@@ -55,16 +76,26 @@ div {
   border: none;
   font-family: "montserrat";
   font-size: 1.5em;
+  margin: 10px auto;
+  transform: translateY(180px);
+  font-weight: 700;
+  width: 270px;
+  height: 60px;
+  color: white;
 }
 
-.PTN:hover {
-  background-color: #f2e6ff;
-  color: rgb(63, 155, 172);
+.landing-page .PTN a {
+  text-decoration: none;
+  color: white;
 }
 
-h1 {
-  margin-top: 100px;
-  color: #fff;
-  font-family: "montserrat";
-  font-size: 40px;
+.landing-page .PTN:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: all 0.5s linear;
+}
+
+.landing-page .PTN:hover a {
+  color: black;
+  transition: all 0.5s linear;
 }
