@@ -24,39 +24,78 @@
 
 ## Requirements
 
-- @testing-library/jest-dom
-- @testing-library/react
-- @testing-library/user-event
-- airport-data
-- axios
-- bcryptjs
-- classnames
-- concurrently
-- cors
-- emailjs-com
-- express
-- file-saver
-- firebase
-- is-empty
-- jsonwebtoken
-- jwt-decode
+1.Backend
+
 - mongoose
 - Nodejs
 - nodemon
+- cors
+- express
+- airport-data
+- validator
+- is-empty
+- jsonwebtoken
+- jwt-decode
+- concurrently
+
+  2.Frontend
+
+- axios
+- bcryptjs
+- classnames
+- emailjs-com
 - react
 - react-bootstrap
 - react-dom
 - react-firebaseui
-- react-redux
 - react-router-dom
 - react-scripts
 - reactstrap
 - react-to-pdf
-- redux
-- redux-thunk
-- validator
+- file-saver
+- firebase
+- React Credit cards
+
+3. Testing
+
+- @testing-library/jest-dom
+- @testing-library/react
+- @testing-library/user-event
+
+* @testing-library/jest-dom
+* @testing-library/react
+* @testing-library/user-event
+* airport-data
+* axios
+* bcryptjs
+* classnames
+* concurrently
+* cors
+* emailjs-com
+* express
+* file-saver
+* firebase
+* is-empty
+* jsonwebtoken
+* jwt-decode
+* mongoose
+* Nodejs
+* nodemon
+* react
+* react-bootstrap
+* react-dom
+* react-firebaseui
+* react-redux
+* react-router-dom
+* react-scripts
+* reactstrap
+* react-to-pdf
+* redux
+* redux-thunk
+* validator
 
 ## Development
+
 Heroku deployed link :
 https://flights-booking-v.herokuapp.com/
 
