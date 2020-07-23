@@ -22,15 +22,6 @@ body {
   border: none;
   outline: none;
 }
-input[type="date"]:before {
-  content: attr(placeholder) !important;
-  color: #aaa;
-  margin-right: 1.5em;
-}
-input[type="date"]:focus:before,
-input[type="date"]:valid:before {
-  content: "";
-}
 
 #info {
   font-size: 16px;
@@ -111,11 +102,6 @@ th {
   border-radius: 33px;
   color: white;
 }
-tr:hover {
-  background-color: lightblue;
-  border-radius: 20px;
-}
-/*
 
 .item-list {
   list-style: none;

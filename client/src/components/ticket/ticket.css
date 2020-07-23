@@ -1,0 +1,27 @@
+.Tic h2:nth-of-type(2) {
+  font-family: "montserrat";
+  color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 10px;
+  transform: translateX(30%);
+  background-color: rgba(0, 255, 255, 0.205);
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.Tic h2:nth-of-type(1) {
+  color: rgb(81, 170, 243);
+}
+
+.Tic {
+  background-size: cover;
+
+  height: 40%;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.452);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
