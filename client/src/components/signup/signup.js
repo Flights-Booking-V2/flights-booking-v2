@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
@@ -83,11 +84,13 @@ class Singup extends React.Component {
     return (
       <div>
         <form id="signup">
-          <h1 className="header"> sign Up </h1>
+          <h1 className="header"> Please sign up to continue </h1>
+          <br />
+          <br />
           <h2>{this.state.singup}</h2>
-          <label id="label">User Name</label>
+          {/* <label id="label">User Name</label> */}
           <input
-            className="user_input input"
+            className="email_input"
             type="text"
             placeholder="Enter You UserName "
             defaultValue={values.name}
@@ -96,9 +99,9 @@ class Singup extends React.Component {
           ></input>
           <br />
           <br />
-          <label id="label">Email</label>
+          {/* <label id="label">Email</label> */}
           <input
-            className="email_input input"
+            className="email_input"
             type="email"
             placeholder="Enter Your email "
             defaultValue={values.email}
@@ -107,9 +110,9 @@ class Singup extends React.Component {
           ></input>
           <br />
           <br />
-          <label id="label"> Password</label>
+          {/* <label id="label"> Password</label> */}
           <input
-            className="password_input input"
+            className="password_input"
             type="password"
             placeholder="Enter Your Password "
             defaultValue={values.password}
@@ -118,12 +121,16 @@ class Singup extends React.Component {
           ></input>
           <br />
           <button
-            className="sigup_button input"
+            className="sigup_button"
             onClick={this.handleSubmit.bind(this)}
           >
-            signUp
+            Sign Up
           </button>
+          <br />
 
+          <button className="PTN">
+            <Link to="/Signin"> Sign in </Link>
+          </button>
           <div>
             {this.state.isSignedIn ? (
               <span>

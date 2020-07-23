@@ -7,6 +7,7 @@ import LandingPage from './components/LandingPage/landingPage.js';
 import HomePage from "./components/HomePage/HomePage";
 import AboutUs from './components/aboutUs/aboutUs';
 import ContactUs from './components/contactUs/contactUs';
+import Ticket from './components/ticket/ticket';
 
 //main app 
 //used React routers here to route to the main pages
@@ -22,6 +23,7 @@ function App() {
           <PrivateRoute path='/HomePage' component={HomePage} />
           <PrivateRoute path='/AboutUs' component={AboutUs} />
           <PrivateRoute path='/ContactUs' component={ContactUs} />
+          <PrivateRoute path='/Ticket' component={Ticket} />
         </Switch>
       </div>
       </BrowserRouter>

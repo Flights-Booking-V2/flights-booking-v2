@@ -57,29 +57,29 @@ class ContactUs extends React.Component {
         <div class="border"></div>
         <Form onSubmit={this.handleSubmit.bind(this)}>
           <FormGroup controlId="formBasicEmail">
-            <Label className="text-muted">Email address</Label>
+            {/* <Label className="text-muted">Email address</Label> */}
             <Input
               type="email"
               name="email"
               value={this.state.email}
               className="text-primary"
               onChange={this.handleChange.bind(this, "email")}
-              placeholder="Enter email"
+              placeholder="Your email"
             />
           </FormGroup>
           <FormGroup controlId="formBasicName">
-            <Label className="text-muted">Name</Label>
+            {/* <Label className="text-muted">Name</Label> */}
             <Input
               type="text"
               name="name"
               value={this.state.name}
               className="text-primary"
               onChange={this.handleChange.bind(this, "name")}
-              placeholder="Name"
+              placeholder="Your Name"
             />
           </FormGroup>
           <FormGroup controlId="formBasicSubject">
-            <Label className="text-muted">address</Label>
+            {/* <Label className="text-muted">address</Label> */}
             <Input
               type="text"
               name="address"
@@ -90,13 +90,14 @@ class ContactUs extends React.Component {
             />
           </FormGroup>
           <FormGroup controlId="formBasicMessage">
-            <Label className="text-muted">Message</Label>
+            {/* <Label className="text-muted">Message</Label> */}
             <Input
               type="textarea"
               name="message"
               className="text-primary"
               value={this.state.message}
               onChange={this.handleChange.bind(this, "message")}
+              placeholder=" Please leave your message here ..."
             />
           </FormGroup>
           <Button variant="primary" type="submit" onClick={this.alertMessage}>

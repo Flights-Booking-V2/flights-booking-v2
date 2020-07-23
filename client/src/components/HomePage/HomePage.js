@@ -3,6 +3,7 @@ import Navbar from "../NavBar/NavBar.js";
 import "./style.css";
 import Pdf from "react-to-pdf";
 import { render } from "react-dom";
+import { Link } from 'react-router-dom';
 const airports = require("airport-data");
 const axios = require("axios");
 // var pdf = require('html-pdf');
@@ -47,6 +48,7 @@ class HomePage extends React.Component {
       trip: "",
       dataRn: [],
       Trans: [],
+      dataResult: {}
     };
   }
 
@@ -143,6 +145,7 @@ class HomePage extends React.Component {
         console.log("dddddd", response.data);
         this.setState({
           dataTicket: response.data.Quotes,
+          dataResult: response.data
         });
       })
 
@@ -161,25 +164,39 @@ class HomePage extends React.Component {
       <div>
         <form>
           <table id="info">
+            <Link to={{
+              pathname: '/Ticket',
+              params: {
+                QuoteId: item.QuoteId,
+                Direct: item.Direct.toString(),
+                MinPrice: item.MinPrice,
+                DepartureDate: item.OutboundLeg.DepartureDate,
+                QuoteDateTime: item.QuoteDateTime,
+                carriers: this.state.dataResult.Carriers,
+                dataTicket: dataTicket,
+                carrierId: item.OutboundLeg.CarrierIds[0]
+              }
+            }}>
             <tbody>
-              <tr>
-                <td style={{ width: "50px", padding: "20px" }}>
-                  {item.QuoteId}
-                </td>
-                <td style={{ width: "50px", padding: "20px" }}>
-                  {item.Direct.toString()}
-                </td>
-                <td style={{ width: "50px", padding: "20px" }}>
-                  {item.MinPrice}
-                </td>
-                <td style={{ width: "50px", padding: "20px" }}>
-                  {item.OutboundLeg.DepartureDate}
-                </td>
-                <td style={{ width: "50px", padding: "20px" }}>
-                  {item.QuoteDateTime}
-                </td>
-              </tr>
+                <tr>
+                  <td style={{ width: "50px", padding: "20px" }}>
+                    {item.QuoteId}
+                  </td>
+                  <td style={{ width: "50px", padding: "20px" }}>
+                    {item.Direct.toString()}
+                  </td>
+                  <td style={{ width: "50px", padding: "20px" }}>
+                    {item.MinPrice}
+                  </td>
+                  <td style={{ width: "50px", padding: "20px" }}>
+                    {item.OutboundLeg.DepartureDate}
+                  </td>
+                  <td style={{ width: "50px", padding: "20px" }}>
+                    {item.QuoteDateTime}
+                  </td>
+                </tr>
             </tbody>
+            </Link>
           </table>
         </form>
       </div>
@@ -188,42 +205,47 @@ class HomePage extends React.Component {
       <div ref={ref}>
         <Navbar />
         <div className="main">
-          <label className="L">Depart</label>
+          {/* <label className="L">Depart</label> */}
           <input
-            className="from input1"
+            className="input1"
             value={this.state.departure}
             onChange={this.onTextChanged}
             type="text"
             name="departure"
+            placeholder="Choose your departure city"
           />
           {this.renderSuggestions()}
-          <label className="L">From</label>
+          {/* <label className="L">From</label> */}
 
           <input
-            className="depart input1"
+            className="input1"
             type="date"
             value={this.state.depDate}
             onChange={this.handleChange}
             name="depDate"
+            placeholder="Pick departure date"
           />
           <br></br>
-          <label className="L">Return</label>
+          {/* <label className="L">Return</label> */}
           <input
-            className="to input1"
+            className="input1"
             value={this.state.arrival}
             onChange={this.onTextChanged2}
             type="text"
             name="arrival"
+            placeholder="Choose your arrival city"
           />
           {this.renderSuggestions2()}
-          <label className="M">To</label>
+          {/* <label className="M">To</label> */}
           <input
-            className="return input1"
+            className="input1"
             type="date"
             value={this.state.arrDate}
             onChange={this.handleChange}
             name="arrDate"
+            placeholder="Pick arrival date"
           />
+          <br />
           <br />
           <button className="check_button" onClick={() => this.submit()}>
             Check
@@ -250,18 +272,20 @@ class HomePage extends React.Component {
                 {/* <tbody>{this.renderTableData()}</tbody> */}
               </table>
             </form>
-            {table1}
+              {table1}
           </div>
         </div>
         <div className="AppA">
-      <Pdf targetRef={ref} filename="code-example.pdf">
-        {({ toPdf }) => <button onClick={toPdf}>Print Ticket</button>}
-      </Pdf>
-      <div >
-        {/* <h1>Joy of Travel</h1>
-        <h2></h2> */}
-      </div>
-    </div>
+          <Pdf targetRef={ref} filename="code-example.pdf">
+            {({ toPdf }) => (
+              <button className="check_button" onClick={toPdf}>
+                Print Ticket
+              </button>
+            )}
+          </Pdf>
+          <div>{/* <h1>Joy of Travel</h1>
+        <h2></h2> */}</div>
+        </div>
       </div>
     );
   }

@@ -11,16 +11,8 @@ div {
     overflow: hidden;
 
 } */
-h1{
-    margin-top: 100px;
-    font-family: cursive;
-    color: #fff;
-    font-size: 40px;
-  }
 
-  
-
-  /* .P1{
+/* .P1{
     margin-top: 0px;
     margin-bottom: 20px;
     background: #000203;
@@ -37,43 +29,42 @@ h1{
     box-sizing: border-box;
     outline: none;
     border: none;
-    font-family: "montserrat",sans-serif; 
+  font-family: "montserrat";
   } */
-    .PTN:hover{
-    transform: scale(0.96);
-    background-color: rgb(255, 255, 255);
-  }
 
-  /* p{
+/* p{
     margin-top: 50px;
-    font-family: 'Permanent Marker', cursive;
+  font-family: "montserrat";
     color: rgb(0, 0, 0);
     font-size: 20px;
   } */
-   .PTN {
-    margin-top: 10px;
-    font-family: Georgia, serif;
-    
-    font-size: 35px;
-    width: 15%;
-    padding: 5 16px;
-    height: 44px;
-    text-align: center;
-    box-sizing: border-box;
-    border: none;
-    margin-top: 0px;
-    margin-bottom: 20px;
-   background: rgba(131, 158, 216, 0.924);
-    border-radius: 44px;
-    cursor: pointer;
-    transition: 0.8s;
-   color: rgb(0, 0, 0);
-   font-size: 1.5em;
-  
-  
-  
-  
-  
-  
-  }
-  
+.PTN {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  background: rgba(131, 158, 216, 0.924);
+  color: #fff;
+  border-radius: 44px;
+  cursor: pointer;
+  transition: 0.8s;
+  width: 20%;
+  padding: 5 16px;
+  height: 44px;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: "montserrat";
+  font-size: 1.5em;
+}
+
+.PTN:hover {
+  background-color: #f2e6ff;
+  color: rgb(63, 155, 172);
+}
+
+h1 {
+  margin-top: 100px;
+  color: #fff;
+  font-family: "montserrat";
+  font-size: 40px;
+}

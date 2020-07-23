@@ -3,22 +3,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   height: 30%;
-  font-family: Georgia, serif;
+  font-family: "montserrat";
   top: 40%;
   left: 40%;
-}
-
-.main {
-  text-align: center;
-  font-family: "Bungee Inline", cursive;
-  text-align: center;
-  margin-top: 70px;
-  /* background-color: rgba(62, 53, 83, 0.65); */
-  margin-left: 46px;
-  margin-right: 5px;
-  padding-bottom: 33px;
-  border-radius: 33px;
-  color: white;
 }
 
 .input1 {
@@ -26,12 +13,83 @@ body {
   border-radius: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  width: 200px;
+  width: 260px;
   height: 30px;
   border: 0;
   padding-left: 20px;
   outline: none;
+  text-align: center;
 }
+input[type="date"]:before {
+  content: attr(placeholder) !important;
+  color: #aaa;
+  margin-right: 1.5em;
+}
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+  content: "";
+}
+#info {
+  font-size: 16px;
+  font-family: "montserrat";
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+#info,
+td,
+th {
+  /* border: 2px solid #000000; */
+  padding: 8px;
+  margin-top: 70px;
+  border-collapse: collapse;
+}
+tr {
+  background-color: whitesmoke;
+  border-radius: 30px;
+}
+th {
+  background-color: lightblue;
+}
+.check_button {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  background: rgba(131, 158, 216, 0.924);
+  color: #fff;
+  border-radius: 44px;
+  cursor: pointer;
+  transition: 0.8s;
+  width: 20%;
+  padding: 5 16px;
+  height: 44px;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: "montserrat";
+  font-size: 1.5em;
+}
+.check_button:hover {
+  background-color: #f2e6ff;
+  color: rgb(63, 155, 172);
+}
+.main {
+  text-align: center;
+  font-family: "montserrat";
+  text-align: center;
+  margin-top: 70px;
+  margin-left: 46px;
+  margin-right: 5px;
+  padding-bottom: 33px;
+  border-radius: 33px;
+  color: white;
+}
+tr:hover {
+  background-color: lightblue;
+  border-radius: 20px;
+}
+/*
 
 .item-list {
   border: 1.5px solid white;
@@ -42,25 +100,6 @@ body {
   margin-right: 300px;
 }
 
-.check_button {
-  border-radius: 20px;
-  border: 20;
-  width: 18%;
-  height: 60px;
-  font-size: 1.5em;
-  outline: none;
-  margin-top: 30px;
-  color: rgb(255, 255, 255);
-  /* background-color: rgb(12, 2, 68); */
-  font-weight: bold;
-  margin-left: 100px;
-   
-}
-
-.check_button:hover {
-  background-color: #f2e6ff;
-  color: rgb(89, 79, 144);
-}
 
 .container {
   color: black;
@@ -72,7 +111,6 @@ body {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   border-radius: 5px;
   color: #744545;
-  /* box-shadow: 7px 5px #888888; */
   width: auto;
 }
 
@@ -129,48 +167,6 @@ body {
   padding-bottom: 2px;
   margin-left: 100px;
 }
-#info {
-  font-size: 16px;
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  border-spacing: 2;
-  width: 60%;
-  align-items: center;
-  margin: auto;
-  text-align: center;
-  margin-top: 10%;
-  font-size: 1.5em;
-}
-
-#info,
-td,
-th {
-  border: 6px solid #000000e7;
-  padding: 8px;
-  margin-top: 70px;
-  font-weight: bold;
-}
-
-
-/* 
-.check_button{
-
-  padding-bottom: 5px;
- margin-left: 100px;
- border-radius: 20px;
-  border:0;
-  width:100px;
-  height: 50px;
-  font-size: 1.1em;
-  outline:none;
-  margin-top: 30px;
-  color:white;
-  background-color: rgb(12, 2, 68);
-  font-weight: bold;
-
-
-
-} */
 
 .M {
   color: rgb(81, 73, 126);
@@ -181,20 +177,11 @@ th {
   margin-left: px;
 }
 
-.AppA{
+.AppA {
   border-radius: 20px;
-  
-  
- 
   font-size: 1.1em;
   outline: none;
-  
   color: rgb(111, 149, 155);
-  
   font-weight: bold;
   margin-left: 10%;
-  
-
-}
-
-
+} */
