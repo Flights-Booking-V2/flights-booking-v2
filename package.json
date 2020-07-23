@@ -26,6 +26,7 @@
     "mongoose": "^5.9.24",
     "nodemon": "^2.0.4",
     "react-bootstrap": "^1.2.2",
+    "react-credit-cards": "^0.8.3",
     "react-firebaseui": "^4.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.1",

@@ -1,0 +1,120 @@
+.login {
+  text-align: center;
+  font-family: "montserrat";
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 500px;
+  margin-right: 500px;
+  padding-bottom: 2px;
+  border-radius: 100px;
+  color: white;
+}
+
+.input {
+  outline: none;
+  border-radius: 50px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 35px;
+  border: 0;
+  padding-left: 30px;
+}
+
+label {
+  font-size: 1.4em;
+}
+
+.button_signin {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  background: rgba(131, 158, 216, 0.924);
+  color: #fff;
+  border-radius: 44px;
+  cursor: pointer;
+  transition: 0.8s;
+  width: 50%;
+  padding: 5 16px;
+  height: 44px;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: "montserrat";
+  font-size: 1.5em;
+}
+
+.button_signin:hover {
+  background-color: #f2e6ff;
+  color: rgb(63, 155, 172);
+}
+
+.header {
+  margin-top: 100px;
+  font-family: "montserrat";
+  color: #fff;
+  font-size: 30px;
+}
+
+.email_lab {
+  margin-top: 10px;
+  font-family: "montserrat";
+  color: rgb(7, 50, 63);
+  font-size: 35px;
+}
+
+.Password_lab {
+  margin-top: 10px;
+  font-family: "montserrat";
+  color: rgb(7, 50, 63);
+  font-size: 35px;
+}
+
+.password_input {
+  display: block;
+  width: 100%;
+  padding: 0 16px;
+  height: 44px;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: "montserrat";
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.email_input {
+  display: block;
+  width: 100%;
+  padding: 0 16px;
+  height: 44px;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: "montserrat";
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.PTN {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  background: rgba(131, 158, 216, 0.924);
+  color: #fff;
+  border-radius: 44px;
+  cursor: pointer;
+  transition: 0.8s;
+  width: 20%;
+  padding: 5 16px;
+  height: 44px;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: "montserrat";
+  font-size: 1.5em;
+}
+
+.PTN:hover {
+  background-color: #f2e6ff;
+  color: rgb(63, 155, 172);
+}

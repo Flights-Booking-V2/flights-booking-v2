@@ -30,6 +30,7 @@ class Ticket extends React.Component {
                 <h2>Quote Date Time</h2>
                 <p>{QuoteDateTime}</p>
             </div>
+            
         )
     }
 }
