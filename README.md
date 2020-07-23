@@ -12,6 +12,9 @@
 
 1. [Usage](#Usage)
 1. [Requirements](#requirements)
+   1. [Backend ](#Backend)
+   1. [Frontend](#Frontend)
+   1. [Frontend](#Frontend)
 1. [Development](#development)
    1. [Installing Dependencies](#installing-dependencies)
    1. [Tasks](#tasks)
@@ -24,7 +27,7 @@
 
 ## Requirements
 
-1.Backend
+### Installing Dependencies
 
 - mongoose
 - Nodejs
@@ -38,7 +41,7 @@
 - jwt-decode
 - concurrently
 
-  2.Frontend
+### Installing Dependencies
 
 - axios
 - bcryptjs
@@ -56,43 +59,12 @@
 - firebase
 - React Credit cards
 
-3. Testing
+### Installing Dependencies
 
 - @testing-library/jest-dom
 - @testing-library/react
 - @testing-library/user-event
-
-* @testing-library/jest-dom
-* @testing-library/react
-* @testing-library/user-event
-* airport-data
-* axios
-* bcryptjs
-* classnames
-* concurrently
-* cors
-* emailjs-com
-* express
-* file-saver
-* firebase
-* is-empty
-* jsonwebtoken
-* jwt-decode
-* mongoose
-* Nodejs
-* nodemon
-* react
-* react-bootstrap
-* react-dom
-* react-firebaseui
-* react-redux
-* react-router-dom
-* react-scripts
-* reactstrap
-* react-to-pdf
-* redux
-* redux-thunk
-* validator
+- Enzyame
 
 ## Development
 
