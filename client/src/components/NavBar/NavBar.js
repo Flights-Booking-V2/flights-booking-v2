@@ -15,17 +15,17 @@ class NavBar extends React.Component {
         <div className="logo">FlightBooking</div>
         <div className="navbar_item">
           <NavLink exact to="/HomePage">
-            Home{" "}
+            Home
           </NavLink>
         </div>
         <div className="navbar_item">
-          <NavLink to="/AboutUs">About-us</NavLink>
+          <NavLink to="/AboutUs">About us</NavLink>
         </div>
         <div className="navbar_item">
-          <NavLink to="/ContactUs">Contact-us</NavLink>
+          <NavLink to="/ContactUs">Contact us</NavLink>
         </div>
         <div className="navbar_item">
-          <NavLink to="/">Log-out</NavLink>
+          <NavLink to="/">Log out</NavLink>
         </div>
       </nav>
     );

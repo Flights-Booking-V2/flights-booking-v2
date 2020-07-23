@@ -44,7 +44,7 @@ class Ticket extends React.Component {
     // var carrier = getCarrier();
     // console.log(carrierId, '525555555555555', carrier);
     return (
-      <div ref={ref}>
+      <div className="Tic" ref={ref}>
         <h2>Price</h2>
         <p>{MinPrice}</p>
         <h2>Departure Date</h2>
