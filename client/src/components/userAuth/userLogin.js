@@ -75,7 +75,7 @@ class Signin extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="sign-in">
         <form className="login">
           <h1 className="header">Please sign in to continue</h1>
           <br />

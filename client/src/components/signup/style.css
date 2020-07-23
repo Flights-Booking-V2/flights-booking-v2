@@ -1,3 +1,9 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 /* #signup {
   text-align: center;
   font-family: "montserrat";
@@ -51,14 +57,56 @@ h1 {
   font-size: 3em;
   font-family: "montserrat";
 } */
-.sigup_button {
-  margin-top: 0px;
-  margin-bottom: 20px;
-  background: rgba(131, 158, 216, 0.924);
-  color: #fff;
+
+.sign-up {
+  transform: translatey(25%);
+}
+
+.sign-up form h1.header {
+  text-align: center;
+  padding: 10px;
+  width: 700px;
+  margin: 20px auto;
+  border-radius: 25px;
+  transform: translatey(20px);
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgba(71, 71, 71, 0.712);
+  height: 70px;
+  font-weight: 850;
+  color: white;
+}
+::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.733);
+}
+
+.sign-up input {
+  width: 500px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  font-weight: 800;
+  padding: 25px;
+  margin: 0px auto;
+  text-align: center;
+  border: 1px solid #222;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  height: 55px;
+}
+
+.sign-up input:focus {
+  box-shadow: 1px -1px 5px rgb(5, 224, 5);
+  border: 2px solid rgb(5, 224, 5);
+}
+
+.sign-up button,
+.signup_button {
+  background: rgb(0, 162, 255);
+  color: rgb(255, 255, 255);
   border-radius: 44px;
   cursor: pointer;
-  transition: 0.8s;
   width: 20%;
   padding: 5 16px;
   height: 44px;
@@ -68,38 +116,32 @@ h1 {
   border: none;
   font-family: "montserrat";
   font-size: 1.5em;
-}
-.sigup_button:hover {
-  background-color: #f2e6ff;
-  color: rgb(12, 2, 68);
-}
-
-.header {
-  margin-top: 100px;
-  font-family: "montserrat";
-  color: #fff;
-  font-size: 30px;
-}
-.PTN {
-  margin-top: 0px;
-  margin-bottom: 20px;
-  background: rgba(131, 158, 216, 0.924);
-  color: #fff;
-  border-radius: 44px;
-  cursor: pointer;
-  transition: 0.8s;
-  width: 20%;
-  padding: 5 16px;
-  height: 44px;
-  text-align: center;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  font-family: "montserrat";
-  font-size: 1.5em;
+  margin: 8px auto;
+  font-weight: 700;
+  width: 270px;
+  height: 50px;
+  color: white;
+  transform: translatey(10px);
 }
 
-.PTN:hover {
-  background-color: #f2e6ff;
-  color: rgb(63, 155, 172);
+.sign-up .PTN a {
+  text-decoration: none;
+  color: white;
+}
+
+.sign-up .PTN:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: all 0.5s linear;
+}
+
+.signup_button:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: all 0.5s linear;
+}
+
+.sign-up .PTN:hover a {
+  color: black;
+  transition: all 0.5s linear;
 }
