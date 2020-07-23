@@ -3,8 +3,10 @@ import Navbar from "../NavBar/NavBar.js";
 import "./style.css";
 import Pdf from "react-to-pdf";
 import { render } from "react-dom";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+
 const airports = require("airport-data");
+
 const axios = require("axios");
 // var pdf = require('html-pdf');
 const ref = React.createRef();
@@ -48,9 +50,10 @@ class HomePage extends React.Component {
       trip: "",
       dataRn: [],
       Trans: [],
-      dataResult: {}
+      dataResult: {},
     };
   }
+
 
   onTextChanged = (e) => {
     const value = e.target.value;
@@ -145,7 +148,7 @@ class HomePage extends React.Component {
         console.log("dddddd", response.data);
         this.setState({
           dataTicket: response.data.Quotes,
-          dataResult: response.data
+          dataResult: response.data,
         });
       })
 
@@ -164,20 +167,22 @@ class HomePage extends React.Component {
       <div>
         <form>
           <table id="info">
-            <Link to={{
-              pathname: '/Ticket',
-              params: {
-                QuoteId: item.QuoteId,
-                Direct: item.Direct.toString(),
-                MinPrice: item.MinPrice,
-                DepartureDate: item.OutboundLeg.DepartureDate,
-                QuoteDateTime: item.QuoteDateTime,
-                carriers: this.state.dataResult.Carriers,
-                dataTicket: dataTicket,
-                carrierId: item.OutboundLeg.CarrierIds[0]
-              }
-            }}>
-            <tbody>
+            <Link
+              to={{
+                pathname: "/Ticket",
+                params: {
+                  QuoteId: item.QuoteId,
+                  Direct: item.Direct.toString(),
+                  MinPrice: item.MinPrice,
+                  DepartureDate: item.OutboundLeg.DepartureDate,
+                  QuoteDateTime: item.QuoteDateTime,
+                  carriers: this.state.dataResult.Carriers,
+                  dataTicket: dataTicket,
+                  carrierId: item.OutboundLeg.CarrierIds[0],
+                },
+              }}
+            >
+              <tbody>
                 <tr>
                   <td style={{ width: "50px", padding: "20px" }}>
                     {item.QuoteId}
@@ -195,7 +200,7 @@ class HomePage extends React.Component {
                     {item.QuoteDateTime}
                   </td>
                 </tr>
-            </tbody>
+              </tbody>
             </Link>
           </table>
         </form>
@@ -272,10 +277,10 @@ class HomePage extends React.Component {
                 {/* <tbody>{this.renderTableData()}</tbody> */}
               </table>
             </form>
-              {table1}
+            {table1}
           </div>
         </div>
-        <div className="AppA">
+        {/* <div className="AppA">
           <Pdf targetRef={ref} filename="code-example.pdf">
             {({ toPdf }) => (
               <button className="check_button" onClick={toPdf}>
@@ -283,9 +288,7 @@ class HomePage extends React.Component {
               </button>
             )}
           </Pdf>
-          <div>{/* <h1>Joy of Travel</h1>
-        <h2></h2> */}</div>
-        </div>
+        </div> */}
       </div>
     );
   }
