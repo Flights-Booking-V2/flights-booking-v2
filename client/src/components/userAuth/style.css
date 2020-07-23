@@ -1,108 +1,59 @@
-.login {
+*,
+.header {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
   text-align: center;
-  font-family: "montserrat";
+}
+
+.sign-in {
+  transform: translatey(25%);
+}
+
+.sign-in h1 {
   text-align: center;
-  margin-top: 20px;
-  margin-left: 500px;
-  margin-right: 500px;
-  padding-bottom: 2px;
-  border-radius: 100px;
+  padding: 10px;
+  width: 700px;
+  margin: 20px auto;
+  border-radius: 25px;
+  border: 2px solid rgb(255, 255, 255);
+  transform: translatey(30px);
+  background-color: rgba(71, 71, 71, 0.507);
+  height: 70px;
+  font-weight: 850;
   color: white;
 }
 
-.input {
+.sign-in input {
+  width: 500px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  font-weight: 800;
+  padding: 25px;
+  margin: 10px auto;
+  text-align: center;
+  height: 55px;
+  border-radius: 15px;
   outline: none;
-  border-radius: 50px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  width: 200px;
-  height: 35px;
-  border: 0;
-  padding-left: 30px;
+  border: none;
+}
+
+.sign-in input:focus {
+  box-shadow: 1px -1px 5px rgb(5, 224, 5);
+  border: 2px solid rgb(5, 224, 5);
 }
 
 label {
   font-size: 1.4em;
 }
 
-.button_signin {
-  margin-top: 0px;
-  margin-bottom: 20px;
-  background: rgba(131, 158, 216, 0.924);
-  color: #fff;
+.sign-in button {
+  background: rgb(0, 162, 255);
+  color: rgb(255, 255, 255);
   border-radius: 44px;
   cursor: pointer;
-  transition: 0.8s;
-  width: 50%;
-  padding: 5 16px;
-  height: 44px;
-  text-align: center;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  font-family: "montserrat";
-  font-size: 1.5em;
-}
-
-.button_signin:hover {
-  background-color: #f2e6ff;
-  color: rgb(63, 155, 172);
-}
-
-.header {
-  margin-top: 100px;
-  font-family: "montserrat";
-  color: #fff;
-  font-size: 30px;
-}
-
-.email_lab {
-  margin-top: 10px;
-  font-family: "montserrat";
-  color: rgb(7, 50, 63);
-  font-size: 35px;
-}
-
-.Password_lab {
-  margin-top: 10px;
-  font-family: "montserrat";
-  color: rgb(7, 50, 63);
-  font-size: 35px;
-}
-
-.password_input {
-  display: block;
-  width: 100%;
-  padding: 0 16px;
-  height: 44px;
-  text-align: center;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  font-family: "montserrat";
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.email_input {
-  display: block;
-  width: 100%;
-  padding: 0 16px;
-  height: 44px;
-  text-align: center;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  font-family: "montserrat";
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.PTN {
-  margin-top: 0px;
-  margin-bottom: 20px;
-  background: rgba(131, 158, 216, 0.924);
-  color: #fff;
-  border-radius: 44px;
-  cursor: pointer;
-  transition: 0.8s;
   width: 20%;
   padding: 5 16px;
   height: 44px;
@@ -112,9 +63,26 @@ label {
   border: none;
   font-family: "montserrat";
   font-size: 1.5em;
+  margin: 8px auto;
+  font-weight: 700;
+  width: 270px;
+  height: 50px;
+  color: white;
+  transform: translatey(10px);
 }
 
-.PTN:hover {
-  background-color: #f2e6ff;
-  color: rgb(63, 155, 172);
+.sign-in .PTN a {
+  text-decoration: none;
+  color: white;
+}
+
+.sign-in button:hover {
+  color: black;
+  background-color: white;
+  transition: all 0.5s linear;
+}
+
+.sign-in button:hover a {
+  color: black;
+  transition: all 0.5s linear;
 }

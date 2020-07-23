@@ -2,39 +2,62 @@
   background-color: dimgrey;
   width: 100%;
   padding-block-end: 10%;
-  background: url(about.jpg) no-repeat center;
+  background: url(about.jpg) no-repeat;
+  background-size: cover;
   font-weight: Century Gothic;
-  background-size: 100%;
   padding: 0px 0px 850px 0px;
 }
 
 .Home {
-  height: 50%;
-  width: 70%;
-  background-color: rgb(0, 0, 0, 0.6);
+  height: 40%;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.452);
   position: absolute;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 20px;
 }
 
 .Home h1 {
   color: white;
-  margin-top: 15px;
+  margin: 15px auto;
   font-family: "montserrat";
+  background-color: rgba(240, 248, 255, 0.404);
+  width: 200px;
+  border: 2px solid rgba(221, 221, 221, 0.212);
+  border-radius: 5px;
 }
 
-.P {
+.Home h2:nth-of-type(2) {
+  font-family: "montserrat";
   color: rgb(255, 255, 255);
-  margin-top: 20px;
-  font-size: large;
+  position: absolute;
+  bottom: 10px;
+  transform: translateX(30%);
+  background-color: rgba(0, 255, 255, 0.205);
+  border-radius: 25px;
+  padding: 5px;
 }
 
-.Home h2 {
-  font-family: "montserrat";
+.Home h2:nth-of-type(1) {
   color: rgb(81, 170, 243);
 }
 
 .Home h3 {
+  color: white;
   font-family: "montserrat";
+}
+
+.Home h4 {
+  color: rgb(81, 170, 243);
+  font-size: 20px;
+}
+
+.Home span {
+  color: white;
+  font-weight: 700;
+  display: block;
+  line-height: 23px;
+  font-size: 18px;
 }

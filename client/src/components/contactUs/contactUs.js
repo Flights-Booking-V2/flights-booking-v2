@@ -87,6 +87,7 @@ class ContactUs extends React.Component {
               value={this.state.address}
               onChange={this.handleChange.bind(this, "address")}
               placeholder="address"
+              required
             />
           </FormGroup>
           <FormGroup controlId="formBasicMessage">
