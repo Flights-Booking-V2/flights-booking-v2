@@ -14,12 +14,15 @@ class AboutUs extends React.Component {
             <h2>Our team is:</h2>
             <h3>Scrum Master: Khaled Abousheikh</h3>
             <h4>Development Team Members:</h4>
-            <span>Mohammed Abu Shaaban </span>
             <span>Safaa Alshami </span>
-            <span>Nasr Shamalkh </span>
             <span>Anas Abdelwahed </span>
-
-            <h2>"If We Don't Have Trust, We Have Nothing."</h2>
+            <span>Nasr Shamalkh </span>
+            <span>Mohammed Abu Shaaban </span>
+            <br />
+            <br />
+            <div>
+              <h2>"If We Don't Have Trust, We Have Nothing."</h2>
+            </div>
             {/* <h3>
           Flights booking is a simple flights booking application. Allows you to
           pick a flight ticket by choosing current location "city" and
