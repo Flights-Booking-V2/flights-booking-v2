@@ -1,20 +1,24 @@
+//import used technologies
 import React from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
+
+//import CSS
 import "./style.css";
+
 const axios = require("axios");
 
-// initializing firebase
+//initializing firebase
 firebase.initializeApp({
   apiKey: "AIzaSyCKD1Uydm10LcXglQPGFWYqDDEuy1hAnu8",
   authDomain: "reactlogin-c308d.firebaseapp.com",
 });
 
-//chang the name of componet to singUP
+//create signup compo
 class Singup extends React.Component {
+  //constructor and state
   constructor(props) {
     super(props);
     //change to shcema
@@ -39,7 +43,7 @@ class Singup extends React.Component {
       signInSuccess: () => false,
     },
   };
-  //Load data from a remote endpoint
+  //componentDidMount to load data from a remote endpoint
   componentDidMount = () => {
     firebase.auth().onAuthStateChanged((user) => {
       this.setState({ isSignedIn: !!user });
@@ -47,17 +51,21 @@ class Singup extends React.Component {
     });
   };
 
+  //nextStep function
   nextStep = () => {
     const { step } = this.state;
     this.setState({ step: step + 1 });
   };
 
+  //handleChange function
   handleChange = (e) => {
     this.setState({ [e.target.id]: e.target.value });
   };
 
+  //handleSubmit function
   handleSubmit = (e) => {
     e.preventDefault();
+    //axios routing , then and catch
     axios
       .post("/api/signup", {
         name: this.state.name,
@@ -78,6 +86,7 @@ class Singup extends React.Component {
       });
   };
 
+  // rendering the compo
   render() {
     const { name, password, email, step } = this.state;
     const values = { name, password, email, step };
@@ -176,4 +185,7 @@ class Singup extends React.Component {
   }
 }
 
+//export compo
 export default Singup;
+
+//Check and vaildate

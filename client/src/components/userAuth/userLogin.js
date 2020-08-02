@@ -1,5 +1,10 @@
+//import used technologies
 import React, { Component } from "react";
+
+//import CSS
 import "./style.css";
+
+//import used files
 import { login } from "./LoginFunc";
 import {
   BrowserRouter,
@@ -10,6 +15,7 @@ import {
   Redirect,
 } from "react-router-dom";
 
+// create auth
 const authintication = {
   isLoggedIn: false,
   onAuthintication() {
@@ -23,6 +29,7 @@ const authintication = {
   },
 };
 
+//privateRoute function
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
@@ -35,7 +42,10 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
     }
   />
 );
+
+//create Signin compo
 class Signin extends Component {
+  // constructor and state
   constructor(props) {
     super(props);
     this.state = {
@@ -45,19 +55,22 @@ class Signin extends Component {
       falseSignin: false,
     };
   }
+
+  //handleChange function
   handleChange(e) {
     this.setState({
       [e.target.name]: e.target.value,
     });
   }
 
+  //handleSubmit function
   handleSubmit(e) {
     e.preventDefault();
     const user = {
       email: this.state.email,
       password: this.state.password,
     };
-    login(user)
+    login(user) //login(user) defined inside userAuth file requested above
       .then((res) => {
         if (res) {
           alert("login successfull");
@@ -73,6 +86,8 @@ class Signin extends Component {
         this.setState({ falseSignin: true });
       });
   }
+
+  //rendering the compo
   render() {
     return (
       <div className="sign-in">
@@ -118,4 +133,8 @@ class Signin extends Component {
   }
 }
 
+//export compo
+
 export { authintication, Signin, PrivateRoute };
+
+//Check and vaildate

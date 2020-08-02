@@ -12,7 +12,11 @@ class AboutUs extends React.Component {
           {/* <h1>Flight Booking V2</h1> */}
           <div className="P">
             <h2>Our team is:</h2>
+            <br />
+            <br />
             <h3>Scrum Master: Khaled Abousheikh</h3>
+            <br />
+            <br />
             <h4>Development Team Members:</h4>
             <span>Safaa Alshami </span>
             <span>Anas Abdelwahed </span>
