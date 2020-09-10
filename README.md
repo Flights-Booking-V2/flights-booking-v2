@@ -58,7 +58,7 @@
 
 ## Development
 Heroku deployed link :
-https://flights-booking-v.herokuapp.com/
+https://flights-booking-v2.herokuapp.com/
 
 ### Installing Dependencies
 
